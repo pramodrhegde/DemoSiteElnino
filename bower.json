@@ -1,0 +1,24 @@
+{
+  "name": "demosite-fernandotorres",
+  "description": "DemoSite for portfolio",
+  "main": "gruntfile.js",
+  "authors": [
+    "pramod"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Demosite",
+    "Fernando",
+    "Torres"
+  ],
+  "homepage": "index.html",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
