@@ -1,0 +1,24 @@
+@import 'font-face';
+
+@include font-face('League Spartan','../fonts/league_spartan/leaguespartan-bold');
+@include font-face('code_pro_demoregular','../fonts/codepro_regular/Code_Pro_Demo-webfont');
+
+//fonts
+
+//colors
+$background-color-base:#404040;
+$font-color-base:#f6f6f6;
+
+body{
+	font-family:'code_pro_demoregular',sans-serif,arial;
+	font-size:16px;
+	line-height:1.5;
+	font-weight:noraml;
+	background-color:$background-color-base;
+	color:$font-color-base;
+
+}
+
+h1{
+	font-family:'League Spartan','sans-serif','arial';
+}

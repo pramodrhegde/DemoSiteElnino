@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "League Spartan";
+  src: url("../fonts/league_spartan/leaguespartan-bold.eot?") format("eot"), url("../fonts/league_spartan/leaguespartan-bold.woff2") format("woff2"), url("../fonts/league_spartan/leaguespartan-bold.woff") format("woff"), url("../fonts/league_spartan/leaguespartan-bold.ttf") format("truetype"), url("../fonts/league_spartan/leaguespartan-bold.svg#League_Spartan") format("svg"); }
+@font-face {
+  font-family: "code_pro_demoregular";
+  src: url("../fonts/codepro_regular/Code_Pro_Demo-webfont.eot?") format("eot"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.woff2") format("woff2"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.woff") format("woff"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.ttf") format("truetype"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular") format("svg"); }
+body {
+  font-family: 'code_pro_demoregular',sans-serif,arial;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: noraml;
+  background-color: #404040;
+  color: #f6f6f6; }
+
+h1 {
+  font-family: 'League Spartan','sans-serif','arial'; }
+
+/*# sourceMappingURL=main.css.map */
