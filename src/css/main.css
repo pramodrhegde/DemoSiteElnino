@@ -5,6 +5,10 @@
 @font-face {
   font-family: "code_pro_demoregular";
   src: url("../fonts/codepro_regular/Code_Pro_Demo-webfont.eot?") format("eot"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.woff2") format("woff2"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.woff") format("woff"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.ttf") format("truetype"), url("../fonts/codepro_regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular") format("svg"); }
+html, body {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -20,6 +24,9 @@ h1 {
   position: relative;
   width: 100%;
   margin: 0px auto; }
+  @media (min-width: 48em) {
+    .main {
+      width: 95%; } }
   @media (min-width: 62em) {
     .main {
       width: 90%; } }

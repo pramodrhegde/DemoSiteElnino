@@ -13,9 +13,11 @@ $banner-background-color:orange;
 $info-color1:green;
 $info-color2:purple;
 //mixins
-
+html,body{
+	margin:0;
+	padding:0;
+}
 body{
-
 	font-family:$montserret;
 	font-size:16px;
 	line-height:1.5;
@@ -32,6 +34,10 @@ h1{
 	position:relative;
 	width:100%;
 	margin:0px auto;
+	
+	@media (min-width:48em){
+		width:95%;
+	}
 
 	@media (min-width:62em){
 		width:90%;
@@ -43,6 +49,7 @@ h1{
 }
 
 .banner{
+
 	background:$banner-background-color;
 }
 .life-story,.merchandise{
