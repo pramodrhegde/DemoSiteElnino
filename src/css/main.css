@@ -45,7 +45,7 @@ h1 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #2a2a2a url(../images/comp/banner.jpg) 7% 10% no-repeat;
+  background: #2a2a2a url(../images/comp/banner.jpg) 8% 50% no-repeat;
   background-size: cover;
   opacity: 0.6;
   z-index: -1; }
