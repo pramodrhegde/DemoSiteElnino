@@ -22,7 +22,7 @@ h1 {
 
 .main {
   position: relative;
-  width: 100%;
+  width: 96%;
   margin: 0px auto; }
   @media (min-width: 48em) {
     .main {
