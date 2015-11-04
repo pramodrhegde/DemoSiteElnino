@@ -23,7 +23,6 @@ h1 {
 .main {
   position: relative;
   width: 100%;
-  width: 100vw;
   margin: 0px auto; }
   @media (min-width: 48em) {
     .main {
@@ -36,7 +35,20 @@ h1 {
       max-width: 81.25rem; } }
 
 .banner {
-  background: orange; }
+  position: relative;
+  display: block; }
+
+.banner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #2a2a2a url(../images/comp/banner.jpg) 7% 10% no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1; }
 
 .life-story, .merchandise {
   background-color: green; }

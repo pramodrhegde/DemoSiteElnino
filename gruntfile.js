@@ -20,6 +20,21 @@ module.exports = function(grunt) {
         files:['sass/*.scss'],
         tasks:['sass']
       }
+    },
+    imagemin:{
+      src:{
+        options:{
+          optimizationLevel:3,
+          progressive:true,
+          interlaced:true
+        },
+        files:[{
+          expand:true,
+          cwd:'src/images',
+          src:['**/*.{png,jpg,gif}'],
+          dest:'src/images/comp/'
+        }]
+      }
     }
   });
 
@@ -29,9 +44,11 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "wire-dependency" task.
   grunt.loadNpmTasks('grunt-wiredep');
 
-  // Load the plugin that provides the "sass" task.
+  // Load the plugin that provides the "watch" task.
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  // Load the plugin that provides the "image minify" task.
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
   grunt.registerTask('default', ['sass']);

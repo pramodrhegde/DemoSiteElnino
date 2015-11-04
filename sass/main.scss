@@ -9,7 +9,7 @@ $montserret:'Montserrat', sans-serif;
 //colors
 $background-color-base:#404040;
 $font-color-base:#f6f6f6;
-$banner-background-color:orange;
+$banner-background-color:#2a2a2a;
 $info-color1:green;
 $info-color2:purple;
 //mixins
@@ -33,7 +33,6 @@ h1{
 .main{
 	position:relative;
 	width:100%;
-	width:100vw;
 	margin:0px auto;
 	
 	@media (min-width:48em){
@@ -50,8 +49,20 @@ h1{
 }
 
 .banner{
-
-	background:$banner-background-color;
+	position:relative;
+	display:block;
+}
+.banner:after{
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background:$banner-background-color url(../images/comp/banner.jpg) 7% 10% no-repeat;
+	background-size:cover;
+	opacity:0.6;
+	z-index:-1;
 }
 .life-story,.merchandise{
 	background-color:$info-color1;
