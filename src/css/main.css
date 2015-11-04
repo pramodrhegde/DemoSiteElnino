@@ -20,9 +20,6 @@ h1 {
   position: relative;
   width: 100%;
   margin: 0px auto; }
-  @media (min-width: 48em) {
-    .main {
-      width: 95%; } }
   @media (min-width: 62em) {
     .main {
       width: 90%; } }
