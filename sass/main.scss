@@ -32,7 +32,7 @@ h1{
 	position:relative;
 	width:100%;
 	margin:0px auto;
-	
+
 	@media (min-width:62em){
 		width:90%;
 	}
@@ -51,6 +51,7 @@ h1{
 .stats{
 	background-color:$info-color2;
 }
+
 .util-height{
 	height:auto;
 	min-height:100vh;
