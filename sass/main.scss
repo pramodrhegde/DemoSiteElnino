@@ -7,12 +7,14 @@
 
 //fonts
 $montserret:'Montserrat', sans-serif;
+$league_spartan:'League Spartan', sans-serif;
+$code_pro :'code_pro_demoregular', sans-serif;
 //colors
 $background-color-base:#404040;
 $font-color-base:#f6f6f6;
 $banner-background-color:#2a2a2a;
-$orange-button:#fb8819;
-$blue-button:#30cbec;
+$orange-button-color:#fb8819;
+$blue-button-color:#30cbec;
 $info-color1:green;
 $info-color2:purple;
 
@@ -53,6 +55,30 @@ h1{
 	}
 }
 
+.logo-mobile{
+	width:100%;
+	background:darken($banner-background-color,5%);
+	text-align:center;
+	color:$font-color-base;
+	height:46px;
+}
+.logo-mobile a{
+	color:inherit;
+	font-family:$league_spartan;
+	font-size:1.2rem;
+}
+.search-box{
+	width:100%;
+	position:relative;
+	background:transparent;
+	height:46px;
+}
+.search-box input{
+	height:inherit;
+	padding:10px 20px;
+	width:90%;
+}
+
 .banner{
 	position:relative;
 	display:block;
@@ -89,18 +115,54 @@ h1{
 
 .btn{
 	border-radius:0;
+	padding-top:0.625rem;
+	padding-bottom:0.625rem;
 }
 .orange-btn{
-	border-color:$orange-button;
-	background:$orange-button;
+	border-color:$orange-button-color;
+	background:$orange-button-color;
+	color:$font-color-base;
+}
+.orange-btn:hover,.orange-btn:focus,.blue-btn:focus,.orange-visited{
+	background:darken($orange-button-color,5%);
 	color:$font-color-base;
 }
 .blue-btn{
-	border-color:$blue-button;
-	background:$blue-button;
+	border-color:$blue-button-color;
+	background:$blue-button-color;
 	color:$font-color-base;
 }
-
+.blue-btn:hover,.blue-btn:active,.blue-btn:focus,.blue-btn:visited{
+	background:darken($blue-button-color,5%);
+	color:$font-color-base;
+}
+.search-button{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:46px;
+	width:50px;
+	text-indent:-9999px;
+	background:$orange-button-color url('../images/search.png') center center no-repeat;
+}
+.menu-button{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:46px;
+	width:50px;
+	text-indent:-9999px;
+	background:$blue-button-color url('../images/menu.png') center center no-repeat;
+}
+.cross-button{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:46px;
+	width:50px;
+	text-indent:-9999px;
+	background:$orange-button-color url('../images/cross.png') center center no-repeat;
+}
 //Form elements
 
 input,textarea,button,select{

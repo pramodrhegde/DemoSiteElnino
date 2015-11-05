@@ -34,6 +34,29 @@ h1 {
     .main {
       max-width: 81.25rem; } }
 
+.logo-mobile {
+  width: 100%;
+  background: #1d1d1d;
+  text-align: center;
+  color: #f6f6f6;
+  height: 46px; }
+
+.logo-mobile a {
+  color: inherit;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem; }
+
+.search-box {
+  width: 100%;
+  position: relative;
+  background: transparent;
+  height: 46px; }
+
+.search-box input {
+  height: inherit;
+  padding: 10px 20px;
+  width: 90%; }
+
 .banner {
   position: relative;
   display: block; }
@@ -64,17 +87,54 @@ h1 {
   display: none; }
 
 .btn {
-  border-radius: 0; }
+  border-radius: 0;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
 
 .orange-btn {
   border-color: #fb8819;
   background: #fb8819;
   color: #f6f6f6; }
 
+.orange-btn:hover, .orange-btn:focus, .blue-btn:focus, .orange-visited {
+  background: #f67b04;
+  color: #f6f6f6; }
+
 .blue-btn {
   border-color: #30cbec;
   background: #30cbec;
   color: #f6f6f6; }
+
+.blue-btn:hover, .blue-btn:active, .blue-btn:focus, .blue-btn:visited {
+  background: #19c5ea;
+  color: #f6f6f6; }
+
+.search-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 46px;
+  width: 50px;
+  text-indent: -9999px;
+  background: #fb8819 url("../images/search.png") center center no-repeat; }
+
+.menu-button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 46px;
+  width: 50px;
+  text-indent: -9999px;
+  background: #30cbec url("../images/menu.png") center center no-repeat; }
+
+.cross-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 46px;
+  width: 50px;
+  text-indent: -9999px;
+  background: #fb8819 url("../images/cross.png") center center no-repeat; }
 
 input, textarea, button, select {
   border: none;
