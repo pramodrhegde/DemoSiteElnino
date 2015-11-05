@@ -77,7 +77,8 @@ h1 {
   color: #f6f6f6; }
 
 input, textarea, button, select {
-  border: none; }
+  border: none;
+  border-radius: 0; }
 
 input:focus, textarea:focus, button:focus, select:focus {
   outline: none; }
