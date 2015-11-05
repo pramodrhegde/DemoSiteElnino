@@ -63,4 +63,23 @@ h1 {
 .hidden {
   display: none; }
 
+.btn {
+  border-radius: 0; }
+
+.orange-btn {
+  border-color: #fb8819;
+  background: #fb8819;
+  color: #f6f6f6; }
+
+.blue-btn {
+  border-color: #30cbec;
+  background: #30cbec;
+  color: #f6f6f6; }
+
+input, textarea, button, select {
+  border: none; }
+
+input:focus, textarea:focus, button:focus, select:focus {
+  outline: none; }
+
 /*# sourceMappingURL=main.css.map */
