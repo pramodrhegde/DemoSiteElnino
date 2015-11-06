@@ -123,7 +123,7 @@ div.quotes p {
   text-align: center; }
 
 .info p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 20px 5px; }
 
 .life-story {
@@ -165,9 +165,19 @@ div.video {
 footer {
   background: #f5f5f5; }
 
-.social {
-  margin: 10px 10px;
+.footer-pic {
+  border-radius: 50%;
+  margin: 10px auto;
+  background: url("../images/comp/footer-pic.jpg") center center no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px; }
+
+.footer-links {
   text-align: center; }
+
+.social {
+  margin: 10px 10px; }
 
 .social li {
   display: inline-block; }
