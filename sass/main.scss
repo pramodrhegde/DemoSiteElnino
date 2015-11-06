@@ -12,13 +12,24 @@ $code_pro :'code_pro_demoregular', sans-serif;
 //colors
 $background-color-base:#404040;
 $font-color-base:#f6f6f6;
+$footer-background-color:#f5f5f5;
 $banner-background-color:#2a2a2a;
 $orange-button-color:#fb8819;
 $blue-button-color:#30cbec;
-$info-color1:green;
-$info-color2:purple;
+$secondary-banner-color:#323232;
 
 //mixins
+@mixin create-button($color,$background,$border-color){
+	color:$color;
+	background:$background;
+	border-color:$border-color;
+	font-family:$league_spartan;
+	text-transform:uppercase;
+	&:hover,&:focus,&:visited,&:active{
+		background:darken($background,5%);
+		color:$color;
+	}
+}
 
 html,body{
 	margin:0;
@@ -28,20 +39,34 @@ body{
 	font-family:$montserret;
 	font-size:16px;
 	line-height:1.5;
-	font-weight:noraml;
+	font-weight:normal;
 	background-color:$background-color-base;
 	color:$font-color-base;
 }
-
-h1{
-	font-family:'League Spartan','sans-serif','arial';
+ul{
+	padding:0;
+	margin:0;
+}
+ul li{
+	list-style:none;
 }
 
+h1{
+	font-family:$league_spartan;
+}
+h2{
+	font-family:$code_pro;
+}
+hr{
+	margin:0 auto;
+	border-top-color:$font-color-base;
+	width:90%;
+}
 .main{
 	position:relative;
-	width:100%;
+	float:none;
 	margin:0px auto;
-	
+	padding:0px;
 	@media (min-width:48em){
 		width:95%;
 	}
@@ -78,7 +103,18 @@ h1{
 	padding:10px 20px;
 	width:90%;
 }
-
+.hero{
+	padding:5px 15px;
+}
+.hero h2{
+	font-size:1.2rem;
+}
+div.quotes{
+	width:65%;
+}
+div.quotes p{
+	font-size:0.8rem
+}
 .banner{
 	position:relative;
 	display:block;
@@ -92,15 +128,92 @@ h1{
 	left:0;
 	background:$banner-background-color url(../images/comp/banner.jpg) 8% 50% no-repeat;
 	background-size:cover;
-	opacity:0.6;
+	opacity:0.5;
 	z-index:-1;
 }
-.life-story,.merchandise{
-	background-color:$info-color1;
+.highlight{
+	font-size:1.5rem;
+}
+.blue-highlight{
+	font-size:1.8rem;
+	color:$orange-button-color;
+}
+.orange-highlight{
+	font-size:1.7rem;
+	color:$blue-button-color;
+}
+
+.info{
+	padding: 35px 10px 15px;
+}
+.info h2{
+	font-size:1.5rem;
+	text-align:center;
+}
+.info p{
+	font-size:0.8rem;
+	padding:20px 5px;
+}
+.life-story{
+	background-color:$secondary-banner-color;
 }
 .stats{
-	background-color:$info-color2;
+	background-color:$banner-background-color;
 }
+.merchandise{
+	background-color:$secondary-banner-color;
+}
+
+.videos{
+	text-align:center;
+	background-color:$secondary-banner-color;
+	padding-top:50px;
+}
+.videos h1{
+	font-size:1.2rem;
+	padding-bottom:25px;
+}
+.blue-section{
+	background:$blue-button-color;
+}
+.orange-section{
+	background:$orange-button-color;
+}
+div.video{
+	width:95%;
+	height:200px;
+	margin:-20px auto 30px;
+}
+.blue-section .video{
+	border:5px solid $orange-button-color;
+}
+.orange-section .video{
+	border:5px solid $blue-button-color;
+}
+footer{
+	background:$footer-background-color;
+}
+.social{
+	margin:10px 10px;
+	text-align:center;
+}
+.social li{
+	display:inline-block;
+}
+.copyrights{
+	background:$secondary-banner-color;
+	width:90%;
+	margin:0 auto;
+	font-size:0.6rem;
+	text-align:center;
+	border-bottom:2px solid $orange-button-color;
+}
+.copyrights p{
+	margin-bottom:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+//utilities
 
 .util-height{
 	height:auto;
@@ -119,23 +232,13 @@ h1{
 	padding-bottom:0.625rem;
 }
 .orange-btn{
-	border-color:$orange-button-color;
-	background:$orange-button-color;
-	color:$font-color-base;
+	@include create-button($font-color-base,$orange-button-color,$orange-button-color);
 }
-.orange-btn:hover,.orange-btn:focus,.blue-btn:focus,.orange-visited{
-	background:darken($orange-button-color,5%);
-	color:$font-color-base;
-}
+
 .blue-btn{
-	border-color:$blue-button-color;
-	background:$blue-button-color;
-	color:$font-color-base;
+	@include create-button($font-color-base,$blue-button-color,$blue-button-color);
 }
-.blue-btn:hover,.blue-btn:active,.blue-btn:focus,.blue-btn:visited{
-	background:darken($blue-button-color,5%);
-	color:$font-color-base;
-}
+
 .search-button{
 	position:absolute;
 	top:0px;
@@ -162,6 +265,22 @@ h1{
 	width:50px;
 	text-indent:-9999px;
 	background:$orange-button-color url('../images/cross.png') center center no-repeat;
+}
+.scroll-button,.story-button,.stats-button,.merchandise-button,.feedback-button{
+	min-width:150px;
+}
+.scroll-button{
+	background:$orange-button-color url('../images/scroll.png') 5px center no-repeat;
+	padding-left:30px;
+}
+.story-button,.stats-button,.merchandise-button{
+	background:$blue-button-color url('../images/arrow.png') 8px center no-repeat;
+}
+.stats-button{
+	background-color:$orange-button-color;
+}
+.merchandise-button{
+	padding-left:35px;
 }
 //Form elements
 

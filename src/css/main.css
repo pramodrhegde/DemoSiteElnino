@@ -13,17 +13,33 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: noraml;
+  font-weight: normal;
   background-color: #404040;
   color: #f6f6f6; }
 
+ul {
+  padding: 0;
+  margin: 0; }
+
+ul li {
+  list-style: none; }
+
 h1 {
-  font-family: 'League Spartan','sans-serif','arial'; }
+  font-family: "League Spartan", sans-serif; }
+
+h2 {
+  font-family: "code_pro_demoregular", sans-serif; }
+
+hr {
+  margin: 0 auto;
+  border-top-color: #f6f6f6;
+  width: 90%; }
 
 .main {
   position: relative;
-  width: 100%;
-  margin: 0px auto; }
+  float: none;
+  margin: 0px auto;
+  padding: 0px; }
   @media (min-width: 48em) {
     .main {
       width: 95%; } }
@@ -57,6 +73,18 @@ h1 {
   padding: 10px 20px;
   width: 90%; }
 
+.hero {
+  padding: 5px 15px; }
+
+.hero h2 {
+  font-size: 1.2rem; }
+
+div.quotes {
+  width: 65%; }
+
+div.quotes p {
+  font-size: 0.8rem; }
+
 .banner {
   position: relative;
   display: block; }
@@ -70,14 +98,88 @@ h1 {
   left: 0;
   background: #2a2a2a url(../images/comp/banner.jpg) 8% 50% no-repeat;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.5;
   z-index: -1; }
 
-.life-story, .merchandise {
-  background-color: green; }
+.highlight {
+  font-size: 1.5rem; }
+
+.blue-highlight {
+  font-size: 1.8rem;
+  color: #fb8819; }
+
+.orange-highlight {
+  font-size: 1.7rem;
+  color: #30cbec; }
+
+.info {
+  padding: 35px 10px 15px; }
+
+.info h2 {
+  font-size: 1.5rem;
+  text-align: center; }
+
+.info p {
+  font-size: 0.8rem;
+  padding: 20px 5px; }
+
+.life-story {
+  background-color: #323232; }
 
 .stats {
-  background-color: purple; }
+  background-color: #2a2a2a; }
+
+.merchandise {
+  background-color: #323232; }
+
+.videos {
+  text-align: center;
+  background-color: #323232;
+  padding-top: 50px; }
+
+.videos h1 {
+  font-size: 1.2rem;
+  padding-bottom: 25px; }
+
+.blue-section {
+  background: #30cbec; }
+
+.orange-section {
+  background: #fb8819; }
+
+div.video {
+  width: 95%;
+  height: 200px;
+  margin: -20px auto 30px; }
+
+.blue-section .video {
+  border: 5px solid #fb8819; }
+
+.orange-section .video {
+  border: 5px solid #30cbec; }
+
+footer {
+  background: #f5f5f5; }
+
+.social {
+  margin: 10px 10px;
+  text-align: center; }
+
+.social li {
+  display: inline-block; }
+
+.copyrights {
+  background: #323232;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  text-align: center;
+  border-bottom: 2px solid #fb8819; }
+
+.copyrights p {
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
 .util-height {
   height: auto;
@@ -92,22 +194,24 @@ h1 {
   padding-bottom: 0.625rem; }
 
 .orange-btn {
-  border-color: #fb8819;
+  color: #f6f6f6;
   background: #fb8819;
-  color: #f6f6f6; }
-
-.orange-btn:hover, .orange-btn:focus, .blue-btn:focus, .orange-visited {
-  background: #f67b04;
-  color: #f6f6f6; }
+  border-color: #fb8819;
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase; }
+  .orange-btn:hover, .orange-btn:focus, .orange-btn:visited, .orange-btn:active {
+    background: #f67b04;
+    color: #f6f6f6; }
 
 .blue-btn {
-  border-color: #30cbec;
+  color: #f6f6f6;
   background: #30cbec;
-  color: #f6f6f6; }
-
-.blue-btn:hover, .blue-btn:active, .blue-btn:focus, .blue-btn:visited {
-  background: #19c5ea;
-  color: #f6f6f6; }
+  border-color: #30cbec;
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase; }
+  .blue-btn:hover, .blue-btn:focus, .blue-btn:visited, .blue-btn:active {
+    background: #19c5ea;
+    color: #f6f6f6; }
 
 .search-button {
   position: absolute;
@@ -135,6 +239,22 @@ h1 {
   width: 50px;
   text-indent: -9999px;
   background: #fb8819 url("../images/cross.png") center center no-repeat; }
+
+.scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
+  min-width: 150px; }
+
+.scroll-button {
+  background: #fb8819 url("../images/scroll.png") 5px center no-repeat;
+  padding-left: 30px; }
+
+.story-button, .stats-button, .merchandise-button {
+  background: #30cbec url("../images/arrow.png") 8px center no-repeat; }
+
+.stats-button {
+  background-color: #fb8819; }
+
+.merchandise-button {
+  padding-left: 35px; }
 
 input, textarea, button, select {
   border: none;
