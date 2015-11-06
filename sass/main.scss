@@ -43,6 +43,9 @@ body{
 	background-color:$background-color-base;
 	color:$font-color-base;
 }
+img{
+	max-width:100%;
+}
 ul{
 	padding:0;
 	margin:0;
