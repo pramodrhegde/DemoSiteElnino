@@ -60,6 +60,9 @@ header {
   height: 100px;
   width: 100%; }
 
+.header-mobile {
+  width: 100%; }
+
 .navbar-mobile, .search-box {
   position: fixed;
   left: 0;
@@ -77,9 +80,15 @@ header {
   padding: 10px 20px;
   width: 90%; }
 
-.header-mobile {
-  width: 100%;
-  min-height: 100vh; }
+.navigation-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #404040;
+  opacity: 0.75;
+  z-index: 3; }
 
 .logo-mobile {
   width: 100%;

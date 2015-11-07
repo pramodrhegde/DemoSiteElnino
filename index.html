@@ -25,7 +25,7 @@
 						<a href="#0" class="btn orange-btn search-button">Search</a>
 					</div>
 
-					<nav class="nav-mobile hidden">
+					<nav class="navigation-mobile hidden">
 						<ul>
 							<li><a href="#">Home</a></li>
 							<li><a href="#">Story</a></li>
@@ -167,5 +167,15 @@
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="bower/bootstrap/dist/js/bootstrap.js"></script>
 	<!-- endbower -->
+	<script>
+		$(document).ready(function(){
+			$('.menu-button').on('click',function(){
+				$('.navigation-mobile').show();
+			});
+			$('.navigation-mobile').on('click',function(){
+				$(this).hide();
+			});
+		});
+	</script>
 </body>
 </html>
