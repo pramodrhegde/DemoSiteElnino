@@ -114,13 +114,13 @@ header{
 	width:95%;
 }
 .navigation-mobile{
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
 	background:$background-color-base;
-	opacity:0.75;
+	opacity:0.95;
 	z-index:3;
 }
 .logo-mobile{
