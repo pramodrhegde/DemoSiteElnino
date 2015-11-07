@@ -91,14 +91,25 @@ header{
 	height:100px;
 	width:100%;
 }
-.navbar-mobile{
+.navbar-mobile,.search-box{
 	position:fixed;
 	left:0;
 	top:0;
 	right:0;
 	height:46px;
 	width:100%;
+	z-index:2;
 }
+.search-box{
+	top:46px;
+}
+
+.search-box input{
+	height:inherit;
+	padding:10px 20px;
+	width:90%;
+}
+
 .header-mobile{
 	width:100%;
 	min-height:100vh;
@@ -115,20 +126,7 @@ header{
 	font-family:$league_spartan;
 	font-size:1.2rem;
 }
-.search-box{
-	width:100%;
-	position:fixed;
-	background:transparent;
-	height:46px;
-	top:46px;
-	left:0;
-	right:0;
-}
-.search-box input{
-	height:inherit;
-	padding:10px 20px;
-	width:90%;
-}
+
 .hero{
 	padding:10px 15px;
 }
