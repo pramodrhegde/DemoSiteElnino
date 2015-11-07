@@ -10,7 +10,8 @@
 
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%; }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -152,26 +153,38 @@ div.quotes p {
   font-size: 1rem;
   padding: 20px 5px; }
 
-.life-story {
+div.life-story, div.stats, div.merchandise {
+  position: relative;
+  z-index: 0; }
+
+div.life-story {
   background: #323232; }
 
-.lifer-story:after {
+div.stats {
+  background-color: #2a2a2a; }
+
+div.merchandise {
+  background-color: #323232; }
+
+div.life-story:after, div.stats:after, div.merchandise:after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: #323232 url("../images/comp/life-story.jpg") center center no-repeat;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.25;
   z-index: -1; }
 
-.stats {
-  background-color: #2a2a2a; }
+div.life-story:after {
+  background: #323232 url("../images/comp/life-story.jpg") center 10% no-repeat; }
 
-.merchandise {
-  background-color: #323232; }
+div.stats:after {
+  background: #2a2a2a url("../images/comp/stats.jpg") center 10% no-repeat; }
+
+div.merchandise:after {
+  background: #323232 url("../images/comp/merchandise.jpg") center 60% no-repeat; }
 
 .videos {
   text-align: center;
