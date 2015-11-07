@@ -21,12 +21,12 @@ $secondary-banner-color:#323232;
 //mixins
 @mixin create-button($color,$background,$border-color){
 	color:$color;
-	background:$background;
+	background-color:$background;
 	border-color:$border-color;
 	font-family:$league_spartan;
 	text-transform:uppercase;
 	&:hover,&:focus,&:visited,&:active{
-		background:darken($background,5%);
+		background-color:darken($background,5%);
 		color:$color;
 	}
 }
@@ -162,7 +162,19 @@ div.quotes p{
 	padding:20px 5px;
 }
 .life-story{
-	background-color:$secondary-banner-color;
+	background:$secondary-banner-color;
+}
+.lifer-story:after{
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background:$secondary-banner-color url('../images/comp/life-story.jpg') center center no-repeat;
+	background-size:cover;
+	opacity:0.5;
+	z-index:-1;
 }
 .stats{
 	background-color:$banner-background-color;
@@ -286,6 +298,7 @@ footer{
 }
 .scroll-button,.story-button,.stats-button,.merchandise-button,.feedback-button{
 	min-width:150px;
+	padding-top:0.9375rem;
 }
 .scroll-button{
 	background:$orange-button-color url('../images/scroll.png') 5px center no-repeat;

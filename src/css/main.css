@@ -130,7 +130,19 @@ div.quotes p {
   padding: 20px 5px; }
 
 .life-story {
-  background-color: #323232; }
+  background: #323232; }
+
+.lifer-story:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #323232 url("../images/comp/life-story.jpg") center center no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1; }
 
 .stats {
   background-color: #2a2a2a; }
@@ -212,22 +224,22 @@ footer {
 
 .orange-btn {
   color: #f6f6f6;
-  background: #fb8819;
+  background-color: #fb8819;
   border-color: #fb8819;
   font-family: "League Spartan", sans-serif;
   text-transform: uppercase; }
   .orange-btn:hover, .orange-btn:focus, .orange-btn:visited, .orange-btn:active {
-    background: #f67b04;
+    background-color: #f67b04;
     color: #f6f6f6; }
 
 .blue-btn {
   color: #f6f6f6;
-  background: #30cbec;
+  background-color: #30cbec;
   border-color: #30cbec;
   font-family: "League Spartan", sans-serif;
   text-transform: uppercase; }
   .blue-btn:hover, .blue-btn:focus, .blue-btn:visited, .blue-btn:active {
-    background: #19c5ea;
+    background-color: #19c5ea;
     color: #f6f6f6; }
 
 .search-button {
@@ -258,7 +270,8 @@ footer {
   background: #fb8819 url("../images/cross.png") center center no-repeat; }
 
 .scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
-  min-width: 150px; }
+  min-width: 150px;
+  padding-top: 0.9375rem; }
 
 .scroll-button {
   background: #fb8819 url("../images/scroll.png") 5px center no-repeat;
