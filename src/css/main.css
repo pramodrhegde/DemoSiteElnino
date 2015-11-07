@@ -194,18 +194,63 @@ div.merchandise:after {
 
 .videos h1 {
   font-size: 1.2rem;
-  padding-bottom: 25px; }
+  padding-bottom: 25px;
+  padding-top: 15px; }
 
 .blue-section {
-  background: #30cbec; }
+  background: #30cbec;
+  padding: 5px 5px; }
 
 .orange-section {
-  background: #fb8819; }
+  background: #fb8819;
+  padding: 5px 5px; }
 
 div.video {
-  width: 95%;
-  height: 200px;
-  margin: -20px auto 30px; }
+  width: 98%;
+  height: 210px;
+  margin: -20px auto 30px;
+  position: relative;
+  z-index: 0; }
+
+div.video > a {
+  color: #f6f6f6;
+  position: relative;
+  top: 28%; }
+
+div.video:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.75;
+  z-index: -1;
+  background: #323232; }
+
+div.video.vid-euro-final-ger:after {
+  background: #323232 url("../images/comp/euro-final-ger.jpg") center center no-repeat;
+  background-size: cover; }
+
+div.video.vid-champians-league:after {
+  background: #323232 url("../images/comp/champians-league.jpg") center center no-repeat;
+  background-size: cover; }
+
+div.video.vid-liverpool:after {
+  background: #323232 url("../images/comp/liverpool.jpg") center center no-repeat;
+  background-size: cover; }
+
+div.video.vid-euro-final-ita:after {
+  background: #323232 url("../images/comp/euro-final-ita.jpg") center center no-repeat;
+  background-size: cover; }
+
+div.video.vid-real-copa:after {
+  background: #323232 url("../images/comp/real-copa.jpg") center center no-repeat;
+  background-size: cover; }
+
+div.video.vid-europa-final:after {
+  background: #323232 url("../images/comp/europa-final.jpg") center center no-repeat;
+  background-size: cover; }
 
 .blue-section .video {
   border: 5px solid #fb8819; }
@@ -252,6 +297,12 @@ footer {
 
 .hidden {
   display: none; }
+
+.no-padding {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px; }
 
 .btn {
   border-radius: 0;
