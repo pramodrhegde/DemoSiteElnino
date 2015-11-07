@@ -45,8 +45,7 @@ hr {
   position: relative;
   float: none;
   margin: 0px auto;
-  padding: 0px;
-  min-height: 100vh; }
+  padding: 0px; }
   @media (min-width: 48em) {
     .main {
       width: 95%; } }
@@ -57,21 +56,21 @@ hr {
     .main {
       max-width: 81.25rem; } }
 
-div.check {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background: red; }
+header {
+  height: 100px;
+  width: 100%; }
 
-.navbar {
+.navbar-mobile {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   height: 46px;
   width: 100%; }
+
+.header-mobile {
+  width: 100%;
+  min-height: 100vh; }
 
 .logo-mobile {
   width: 100%;
@@ -89,7 +88,8 @@ div.check {
   width: 100%;
   position: relative;
   background: transparent;
-  height: 46px; }
+  height: 46px;
+  top: 46px; }
 
 .search-box input {
   height: inherit;
@@ -97,7 +97,7 @@ div.check {
   width: 90%; }
 
 .hero {
-  padding: 5px 15px; }
+  padding: 10px 15px; }
 
 .hero h2 {
   font-size: 1.2rem; }
