@@ -74,6 +74,8 @@ hr{
 	float:none;
 	margin:0px auto;
 	padding:0px;
+	min-height:100vh;
+
 	@media (min-width:48em){
 		width:95%;
 	}
@@ -86,7 +88,22 @@ hr{
 		max-width:81.25rem;
 	}
 }
-
+div.check{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:50px;
+	background:red;
+}
+.navbar{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	height:46px;
+	width:100%;
+}
 .logo-mobile{
 	width:100%;
 	background:darken($banner-background-color,5%);

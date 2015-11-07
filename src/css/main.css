@@ -45,7 +45,8 @@ hr {
   position: relative;
   float: none;
   margin: 0px auto;
-  padding: 0px; }
+  padding: 0px;
+  min-height: 100vh; }
   @media (min-width: 48em) {
     .main {
       width: 95%; } }
@@ -55,6 +56,22 @@ hr {
   @media (min-width: 75em) {
     .main {
       max-width: 81.25rem; } }
+
+div.check {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: red; }
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 46px;
+  width: 100%; }
 
 .logo-mobile {
   width: 100%;
