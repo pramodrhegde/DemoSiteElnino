@@ -78,8 +78,8 @@ header {
 
 .search-box input {
   height: inherit;
-  padding: 10px 20px;
-  width: 90%; }
+  padding: 10px 5% 10px 20px;
+  width: 95%; }
 
 .navigation-mobile {
   position: absolute;
