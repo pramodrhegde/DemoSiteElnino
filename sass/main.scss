@@ -117,10 +117,12 @@ header{
 }
 .search-box{
 	width:100%;
-	position:relative;
+	position:fixed;
 	background:transparent;
 	height:46px;
 	top:46px;
+	left:0;
+	right:0;
 }
 .search-box input{
 	height:inherit;
