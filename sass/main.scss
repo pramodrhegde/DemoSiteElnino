@@ -18,7 +18,7 @@ $banner-background-color:#2a2a2a;
 $orange-button-color:#fb8819;
 $blue-button-color:#30cbec;
 $secondary-banner-color:#323232;
-
+$navigation-background:#263134;
 //mixins
 @mixin create-button($color,$background,$border-color){
 	color:$color;
@@ -70,6 +70,10 @@ hr{
 	margin:0 auto;
 	border-top-color:$font-color-base;
 	width:90%;
+
+	@media (min-width:64em){
+		margin:0 10px;
+	}
 }
 .main{
 	position:relative;
@@ -169,9 +173,6 @@ header{
 	background:$secondary-banner-color url('../images/comp/sidebar-pic.jpg') 0 50% no-repeat;
 	background-size:cover;
 }
-.navigation-mobile ul li{
-	
-}
 .navigation-mobile a{
 	color:$font-color-base;
 	padding:5px 15px 5px 0px;;
@@ -184,24 +185,129 @@ header{
 	color:$font-color-base;
 	height:46px;
 }
-.logo-mobile a{
+.logo-mobile a,.logo-nonmobile a{
 	color:inherit;
 	font-family:$league_spartan;
 	font-size:1.2rem;
 }
+.navigation-nonmobile{
+	width:1100px;
+	margin:0px auto;
+	background:$navigation-background;
+	height:100px;
+	position:relative;
+	@media (min-width:48em){
+		width:90%;
+	}
+}
+.navigation-nonmobile ul{
+	width:100%;
+	height:100px;
+	padding:0px 20px;
+	position:relative;
+}
+.navigation-nonmobile ul li{
+	display:inline-block;
+	height:100px;
+}
+.navigation-nonmobile ul li a{
+	color:$font-color-base;
+	font-size:1.6rem;
+	font-family:$league-spartan;
+	text-transform:uppercase;
+	display:inline-block;
+	padding:35px 20px 25px;
+	min-width:200px;
+	text-align:center;
 
+	&:hover{
+		text-decoration:none;
+	}
+}
+.navigation-nonmobile ul li a.active{
+	background:$blue-button-color;
+}
+.navigation-nonmobile ul li a.search-button{
+	min-width:auto;
+}
+.logo-nonmobile{
+	height:100px;
+	text-align:center;
+	padding:25px 20px 15px;
+}
+.logo-nonmobile a{
+	font-size:2rem;
+}
 .hero{
 	padding:10px 15px;
+	position:static;
+	@media (min-width:64em){
+		margin-top:75px;
+		padding:25px;
+	}
 }
 .hero h2{
 	font-size:1.2rem;
+
+	@media (min-width:64rem){
+		font-size:2rem;
+	}
+}
+.hero h2:nth-child(3){
+	@media (min-width:64em){
+		//margin-bottom:70%;
+	}
+}
+.highlight{
+	font-size:1.5rem;
+
+	@media (min-width:64rem){
+		font-size:2.5rem;
+	}
+}
+.blue-highlight{
+	font-size:1.8rem;
+	color:$orange-button-color;
+
+	@media (min-width:64rem){
+		font-size:2.8rem;
+	}
+}
+.orange-highlight{
+	font-size:1.7rem;
+	color:$blue-button-color;
+
+	@media (min-width:64rem){
+		font-size:2.7rem;
+	}
+}
+.hero-bottom{
+	@media (min-width:64em){
+		position:absolute;
+		bottom:0;
+		padding:10px 15px 15px 10%;
+
+		.quotes:nth-child(2) > p{
+			text-align:right;
+			padding-right:25px;
+		}
+	}
 }
 div.quotes{
 	width:65%;
+	p{
+		font-size:0.8rem
+	}
+	@media (min-width:64em){
+		opacity:0.85;
+		width:90%;
+		p{
+			font-size:1.2rem;
+			padding-left:25px;
+		}
+	}
 }
-div.quotes p{
-	font-size:0.8rem
-}
+
 .banner{
 	position:relative;
 	display:block;
@@ -217,29 +323,32 @@ div.quotes p{
 	background-size:cover;
 	opacity:0.5;
 	z-index:-1;
-}
-.highlight{
-	font-size:1.5rem;
-}
-.blue-highlight{
-	font-size:1.8rem;
-	color:$orange-button-color;
-}
-.orange-highlight{
-	font-size:1.7rem;
-	color:$blue-button-color;
+
+	@media (min-width:48rem){
+		opacity:0.85;
+	}
 }
 
 .info{
 	padding: 35px 10px 15px;
 }
-.info h2{
+.title h2{
 	font-size:1.5rem;
 	text-align:center;
+
+	@media (min-width:64em){
+		font-size:2rem;
+		text-align:left;
+		padding:5px 10px;
+	}
 }
 .info p{
 	font-size:1rem;
 	padding:20px 5px;
+
+	@media (min-width:64rem){
+		padding:20px 10px;
+	}
 }
 div.life-story,div.stats,div.merchandise{
 	position:relative;
@@ -264,15 +373,27 @@ div.life-story:after,div.stats:after,div.merchandise:after{
 	background-size:cover;
 	opacity:0.1;
 	z-index:-1;
+	@media (min-width:48em){
+		position:static;
+	}
 }
 div.life-story:after{
 	background:$secondary-banner-color url('../images/comp/life-story.jpg') center 10% no-repeat;
+	@media (min-width:48em){
+		background:none;
+	}
 }
 div.stats:after{
 	background:$banner-background-color url('../images/comp/stats.jpg') center 10% no-repeat;
+	@media (min-width:48em){
+		background:none;
+	}
 }
 div.merchandise:after{
 	background:$secondary-banner-color url('../images/comp/merchandise.jpg') center 60% no-repeat;
+	@media (min-width:48em){
+		background:none;
+	}
 }
 
 .videos{
@@ -420,6 +541,13 @@ footer{
 	width:50px;
 	text-indent:-9999px;
 	background:$orange-button-color url('../images/search.png') center center no-repeat;
+
+	@media (min-width:48rem){
+		top:15%;
+		right:20px;
+		width:75px;
+		height:70px;
+	}
 }
 .menu-button{
 	position:absolute;
@@ -442,11 +570,23 @@ footer{
 .scroll-button,.story-button,.stats-button,.merchandise-button,.feedback-button{
 	min-width:150px;
 	padding-top:0.9375rem;
+
+	@media (min-width:64em){
+		padding-top:1.25rem;
+		padding-bottom:1rem;
+		min-width:200px;
+	}
 }
-.scroll-button i{
+.scroll-button{
 	//background:$orange-button-color url('../images/scroll.png') 5px center no-repeat;
 	//padding-left:30px;
-	padding:0px 5px 0px 0px;
+	i{
+		padding:0px 5px 0px 0px;
+	}
+	@media (min-width:64em){
+		margin-bottom:10px;
+	}
+	
 }
 .feedback-button i{
 	padding-right:5px;
@@ -456,6 +596,9 @@ footer{
 	//background:$blue-button-color url('../images/arrow.png') 8px center no-repeat;
 	position:absolute;
 	left:25px;
+	@media (min-width:64em){
+		left:40px;
+	}
 }
 .stats-button{
 	//background-color:$orange-button-color;

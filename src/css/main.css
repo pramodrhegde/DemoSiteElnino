@@ -41,6 +41,9 @@ hr {
   margin: 0 auto;
   border-top-color: #f6f6f6;
   width: 90%; }
+  @media (min-width: 64em) {
+    hr {
+      margin: 0 10px; } }
 
 .main {
   position: relative;
@@ -147,22 +150,111 @@ header {
   color: #f6f6f6;
   height: 46px; }
 
-.logo-mobile a {
+.logo-mobile a, .logo-nonmobile a {
   color: inherit;
   font-family: "League Spartan", sans-serif;
   font-size: 1.2rem; }
 
+.navigation-nonmobile {
+  width: 1100px;
+  margin: 0px auto;
+  background: #263134;
+  height: 100px;
+  position: relative; }
+  @media (min-width: 48em) {
+    .navigation-nonmobile {
+      width: 90%; } }
+
+.navigation-nonmobile ul {
+  width: 100%;
+  height: 100px;
+  padding: 0px 20px;
+  position: relative; }
+
+.navigation-nonmobile ul li {
+  display: inline-block;
+  height: 100px; }
+
+.navigation-nonmobile ul li a {
+  color: #f6f6f6;
+  font-size: 1.6rem;
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 35px 20px 25px;
+  min-width: 200px;
+  text-align: center; }
+  .navigation-nonmobile ul li a:hover {
+    text-decoration: none; }
+
+.navigation-nonmobile ul li a.active {
+  background: #30cbec; }
+
+.navigation-nonmobile ul li a.search-button {
+  min-width: auto; }
+
+.logo-nonmobile {
+  height: 100px;
+  text-align: center;
+  padding: 25px 20px 15px; }
+
+.logo-nonmobile a {
+  font-size: 2rem; }
+
 .hero {
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  position: static; }
+  @media (min-width: 64em) {
+    .hero {
+      margin-top: 75px;
+      padding: 25px; } }
 
 .hero h2 {
   font-size: 1.2rem; }
+  @media (min-width: 64rem) {
+    .hero h2 {
+      font-size: 2rem; } }
+
+.highlight {
+  font-size: 1.5rem; }
+  @media (min-width: 64rem) {
+    .highlight {
+      font-size: 2.5rem; } }
+
+.blue-highlight {
+  font-size: 1.8rem;
+  color: #fb8819; }
+  @media (min-width: 64rem) {
+    .blue-highlight {
+      font-size: 2.8rem; } }
+
+.orange-highlight {
+  font-size: 1.7rem;
+  color: #30cbec; }
+  @media (min-width: 64rem) {
+    .orange-highlight {
+      font-size: 2.7rem; } }
+
+@media (min-width: 64em) {
+  .hero-bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px 15px 10%; }
+    .hero-bottom .quotes:nth-child(2) > p {
+      text-align: right;
+      padding-right: 25px; } }
 
 div.quotes {
   width: 65%; }
-
-div.quotes p {
-  font-size: 0.8rem; }
+  div.quotes p {
+    font-size: 0.8rem; }
+  @media (min-width: 64em) {
+    div.quotes {
+      opacity: 0.85;
+      width: 90%; }
+      div.quotes p {
+        font-size: 1.2rem;
+        padding-left: 25px; } }
 
 .banner {
   position: relative;
@@ -179,28 +271,28 @@ div.quotes p {
   background-size: cover;
   opacity: 0.5;
   z-index: -1; }
-
-.highlight {
-  font-size: 1.5rem; }
-
-.blue-highlight {
-  font-size: 1.8rem;
-  color: #fb8819; }
-
-.orange-highlight {
-  font-size: 1.7rem;
-  color: #30cbec; }
+  @media (min-width: 48rem) {
+    .banner:after {
+      opacity: 0.85; } }
 
 .info {
   padding: 35px 10px 15px; }
 
-.info h2 {
+.title h2 {
   font-size: 1.5rem;
   text-align: center; }
+  @media (min-width: 64em) {
+    .title h2 {
+      font-size: 2rem;
+      text-align: left;
+      padding: 5px 10px; } }
 
 .info p {
   font-size: 1rem;
   padding: 20px 5px; }
+  @media (min-width: 64rem) {
+    .info p {
+      padding: 20px 10px; } }
 
 div.life-story, div.stats, div.merchandise {
   position: relative;
@@ -225,15 +317,27 @@ div.life-story:after, div.stats:after, div.merchandise:after {
   background-size: cover;
   opacity: 0.1;
   z-index: -1; }
+  @media (min-width: 48em) {
+    div.life-story:after, div.stats:after, div.merchandise:after {
+      position: static; } }
 
 div.life-story:after {
   background: #323232 url("../images/comp/life-story.jpg") center 10% no-repeat; }
+  @media (min-width: 48em) {
+    div.life-story:after {
+      background: none; } }
 
 div.stats:after {
   background: #2a2a2a url("../images/comp/stats.jpg") center 10% no-repeat; }
+  @media (min-width: 48em) {
+    div.stats:after {
+      background: none; } }
 
 div.merchandise:after {
   background: #323232 url("../images/comp/merchandise.jpg") center 60% no-repeat; }
+  @media (min-width: 48em) {
+    div.merchandise:after {
+      background: none; } }
 
 .videos {
   text-align: center;
@@ -386,6 +490,12 @@ footer {
   width: 50px;
   text-indent: -9999px;
   background: #fb8819 url("../images/search.png") center center no-repeat; }
+  @media (min-width: 48rem) {
+    .search-button {
+      top: 15%;
+      right: 20px;
+      width: 75px;
+      height: 70px; } }
 
 .menu-button {
   position: absolute;
@@ -408,9 +518,17 @@ footer {
 .scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
   min-width: 150px;
   padding-top: 0.9375rem; }
+  @media (min-width: 64em) {
+    .scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
+      padding-top: 1.25rem;
+      padding-bottom: 1rem;
+      min-width: 200px; } }
 
 .scroll-button i {
   padding: 0px 5px 0px 0px; }
+@media (min-width: 64em) {
+  .scroll-button {
+    margin-bottom: 10px; } }
 
 .feedback-button i {
   padding-right: 5px;
@@ -419,6 +537,9 @@ footer {
 .story-button i, .stats-button i, .merchandise-button i {
   position: absolute;
   left: 25px; }
+  @media (min-width: 64em) {
+    .story-button i, .stats-button i, .merchandise-button i {
+      left: 40px; } }
 
 .merchandise-button {
   padding-left: 35px; }
