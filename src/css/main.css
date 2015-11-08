@@ -41,7 +41,7 @@ hr {
   margin: 0 auto;
   border-top-color: #f6f6f6;
   width: 90%; }
-  @media (min-width: 64em) {
+  @media (min-width: 62em) {
     hr {
       margin: 0 10px; } }
 
@@ -50,6 +50,9 @@ hr {
   float: none;
   margin: 0px auto;
   padding: 0px; }
+  @media (min-width: 34em) {
+    .main {
+      width: 90%; } }
   @media (min-width: 48em) {
     .main {
       width: 95%; } }
@@ -156,24 +159,31 @@ header {
   font-size: 1.2rem; }
 
 .navigation-nonmobile {
-  width: 1100px;
+  width: 90%;
   margin: 0px auto;
   background: #263134;
   height: 100px;
   position: relative; }
-  @media (min-width: 48em) {
+  @media (max-width: 62em) {
     .navigation-nonmobile {
-      width: 90%; } }
+      height: 70px; } }
 
 .navigation-nonmobile ul {
   width: 100%;
   height: 100px;
   padding: 0px 20px;
   position: relative; }
+  @media (max-width: 62em) {
+    .navigation-nonmobile ul {
+      height: 70px;
+      padding: 0px 15px; } }
 
 .navigation-nonmobile ul li {
   display: inline-block;
   height: 100px; }
+  @media (max-width: 62em) {
+    .navigation-nonmobile ul li {
+      height: 70px; } }
 
 .navigation-nonmobile ul li a {
   color: #f6f6f6;
@@ -186,6 +196,11 @@ header {
   text-align: center; }
   .navigation-nonmobile ul li a:hover {
     text-decoration: none; }
+  @media (max-width: 62em) {
+    .navigation-nonmobile ul li a {
+      font-size: 1.2rem;
+      padding: 35px 20px 25px;
+      min-width: 100px; } }
 
 .navigation-nonmobile ul li a.active {
   background: #30cbec; }
@@ -198,44 +213,44 @@ header {
   text-align: center;
   padding: 25px 20px 15px; }
 
-.logo-nonmobile a {
+.logo-nonmobile a, .footer-logo a {
   font-size: 2rem; }
 
 .hero {
   padding: 10px 15px;
   position: static; }
-  @media (min-width: 64em) {
+  @media (min-width: 62em) {
     .hero {
       margin-top: 75px;
       padding: 25px; } }
 
 .hero h2 {
   font-size: 1.2rem; }
-  @media (min-width: 64rem) {
+  @media (min-width: 62rem) {
     .hero h2 {
       font-size: 2rem; } }
 
 .highlight {
   font-size: 1.5rem; }
-  @media (min-width: 64rem) {
+  @media (min-width: 62rem) {
     .highlight {
       font-size: 2.5rem; } }
 
 .blue-highlight {
   font-size: 1.8rem;
   color: #fb8819; }
-  @media (min-width: 64rem) {
+  @media (min-width: 62rem) {
     .blue-highlight {
       font-size: 2.8rem; } }
 
 .orange-highlight {
   font-size: 1.7rem;
   color: #30cbec; }
-  @media (min-width: 64rem) {
+  @media (min-width: 62rem) {
     .orange-highlight {
       font-size: 2.7rem; } }
 
-@media (min-width: 64em) {
+@media (min-width: 62em) {
   .hero-bottom {
     position: absolute;
     bottom: 0;
@@ -248,7 +263,7 @@ div.quotes {
   width: 65%; }
   div.quotes p {
     font-size: 0.8rem; }
-  @media (min-width: 64em) {
+  @media (min-width: 62em) {
     div.quotes {
       opacity: 0.85;
       width: 90%; }
@@ -267,21 +282,29 @@ div.quotes {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #2a2a2a url(../images/comp/banner.jpg) 8% 50% no-repeat;
+  background: #2a2a2a url(../images/comp/banner.jpg) no-repeat;
+  background-position: 8% 50%;
   background-size: cover;
   opacity: 0.5;
   z-index: -1; }
+  @media (min-width: 34rem) {
+    .banner:after {
+      background-position: 0 50%; } }
   @media (min-width: 48rem) {
     .banner:after {
-      opacity: 0.85; } }
+      opacity: 0.85;
+      background-position: 55% 50%; } }
 
 .info {
   padding: 35px 10px 15px; }
+  @media (min-width: 62em) {
+    .info {
+      padding: 60px 15px 25px 50px; } }
 
 .title h2 {
   font-size: 1.5rem;
   text-align: center; }
-  @media (min-width: 64em) {
+  @media (min-width: 62em) {
     .title h2 {
       font-size: 2rem;
       text-align: left;
@@ -290,7 +313,7 @@ div.quotes {
 .info p {
   font-size: 1rem;
   padding: 20px 5px; }
-  @media (min-width: 64rem) {
+  @media (min-width: 62rem) {
     .info p {
       padding: 20px 10px; } }
 
@@ -300,12 +323,30 @@ div.life-story, div.stats, div.merchandise {
 
 div.life-story {
   background: #323232; }
+  div.life-story div.image-front {
+    background: black url("../images/comp/life-story.jpg") center center no-repeat;
+    background-size: cover; }
+  div.life-story div.image-behind {
+    background: black url("../images/comp/story-back.jpg") center center no-repeat;
+    background-size: cover; }
 
 div.stats {
   background-color: #2a2a2a; }
+  div.stats div.image-front {
+    background: black url("../images/comp/stats.jpg") center center no-repeat;
+    background-size: cover; }
+  div.stats div.image-behind {
+    background: black url("../images/comp/stats-back.jpg") center center no-repeat;
+    background-size: cover; }
 
 div.merchandise {
   background-color: #323232; }
+  div.merchandise div.image-front {
+    background: black url("../images/comp/merchandise.jpg") center center no-repeat;
+    background-size: cover; }
+  div.merchandise div.image-behind {
+    background: black url("../images/comp/mer-back.jpg") center center no-repeat;
+    background-size: cover; }
 
 div.life-story:after, div.stats:after, div.merchandise:after {
   content: "";
@@ -339,23 +380,72 @@ div.merchandise:after {
     div.merchandise:after {
       background: none; } }
 
+div.cover-pic {
+  position: relative; }
+  div.cover-pic div.image-behind {
+    width: 50%;
+    min-height: 200px;
+    margin-left: 40%;
+    position: relative;
+    border: 5px solid #101010; }
+    div.cover-pic div.image-behind:after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background: #111111;
+      z-index: -1;
+      top: 75%;
+      right: -10%; }
+    div.cover-pic div.image-behind:before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 30%;
+      background: black;
+      z-index: -1;
+      top: -15%;
+      left: -15%; }
+  div.cover-pic div.image-front {
+    width: 75%;
+    min-height: 300px;
+    margin-bottom: 25px;
+    margin-top: -90px;
+    position: relative;
+    border: 5px solid #101010; }
+    div.cover-pic div.image-front:after {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      background: #111111;
+      z-index: -1;
+      top: -20%;
+      left: 30%; }
+
 .videos {
   text-align: center;
   background-color: #323232;
   padding-top: 50px;
   padding: 0px; }
-
-.videos h1 {
-  font-size: 1.2rem;
-  padding-bottom: 25px;
-  padding-top: 15px; }
+  .videos h1 {
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+    padding-top: 15px; }
+    @media (min-width: 48em) {
+      .videos h1 {
+        font-size: 2em;
+        margin-bottom: 45px;
+        padding-top: 35px; } }
 
 .blue-section {
   background: #30cbec;
+  border-bottom: 5px solid #fb8819;
   padding: 5px 5px; }
 
 .orange-section {
   background: #fb8819;
+  border-bottom: 5px solid #30cbec;
   padding: 5px 5px; }
 
 div.video {
@@ -364,6 +454,16 @@ div.video {
   margin: -20px auto 30px;
   position: relative;
   z-index: 0; }
+  @media (min-width: 62em) {
+    div.video {
+      margin: -35px auto 75px;
+      width: 80%;
+      height: 300px; } }
+  @media (max-width: 48em) {
+    div.video {
+      margin: -35px auto 50px;
+      width: 95%;
+      height: 250px; } }
 
 div.video > a {
   color: #f6f6f6;
@@ -407,12 +507,24 @@ div.video.vid-europa-final:after {
 
 .blue-section .video {
   border: 5px solid #fb8819; }
+  @media (min-width: 48em) {
+    .blue-section .video {
+      float: right;
+      margin-right: -5px; } }
 
 .orange-section .video {
   border: 5px solid #30cbec; }
+  @media (min-width: 48em) {
+    .orange-section .video {
+      float: left;
+      margin-left: -5px; } }
 
 footer {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  padding-top: 25px; }
+  @media (min-width: 48em) {
+    footer {
+      padding-top: 70px; } }
 
 .footer-pic {
   border-radius: 50%;
@@ -422,27 +534,63 @@ footer {
   width: 250px;
   height: 250px; }
 
+.footer-logo {
+  text-align: center; }
+
+.footer-logo a {
+  color: #252525; }
+
+@media (min-width: 48em) {
+  .quick-links {
+    padding-left: 5%; } }
+
+@media (min-width: 48em) {
+  .quick-links ul {
+    padding-left: 35px; } }
+
+@media (min-width: 48em) {
+  .quick-links ul li a {
+    font-size: 1.5rem;
+    line-height: 2.2;
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+    color: #252525;
+    padding: 15px 5px 0px 0px;
+    border-bottom: 5px solid #30cbec;
+    margin-bottom: 10px; } }
+.quick-links ul li a:hover {
+  text-decoration: none; }
+
 .footer-links {
   text-align: center; }
 
 .social {
   margin: 10px 10px; }
-
-.social li {
-  display: inline-block; }
+  @media (min-width: 48em) {
+    .social {
+      margin: 45px 10px 10px; } }
+  .social li {
+    display: inline-block; }
+  .social a {
+    margin-top: 5px; }
 
 .copyrights {
   background: #323232;
   width: 90%;
   margin: 0 auto;
-  font-size: 0.6rem;
-  text-align: center;
-  border-bottom: 2px solid #fb8819; }
-
-.copyrights p {
-  margin-bottom: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px; }
+  text-align: center; }
+  .copyrights p {
+    margin-bottom: 0px;
+    font-size: 0.6rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fb8819; }
+    @media (min-width: 48em) {
+      .copyrights p {
+        font-size: 0.8rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #fb8819; } }
 
 .util-height {
   height: auto;
@@ -518,26 +666,31 @@ footer {
 .scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
   min-width: 150px;
   padding-top: 0.9375rem; }
-  @media (min-width: 64em) {
+  @media (min-width: 62em) {
     .scroll-button, .story-button, .stats-button, .merchandise-button, .feedback-button {
       padding-top: 1.25rem;
       padding-bottom: 1rem;
-      min-width: 200px; } }
+      min-width: 200px;
+      margin-left: 10px; } }
 
 .scroll-button i {
   padding: 0px 5px 0px 0px; }
-@media (min-width: 64em) {
+@media (min-width: 62em) {
   .scroll-button {
     margin-bottom: 10px; } }
 
+@media (min-width: 48em) {
+  .feedback-button {
+    margin-left: 0px;
+    margin-top: 35px; } }
 .feedback-button i {
   padding-right: 5px;
   font-size: 1.3rem; }
 
 .story-button i, .stats-button i, .merchandise-button i {
   position: absolute;
-  left: 25px; }
-  @media (min-width: 64em) {
+  left: 20px; }
+  @media (min-width: 62em) {
     .story-button i, .stats-button i, .merchandise-button i {
       left: 40px; } }
 
