@@ -172,7 +172,6 @@ header {
 @media (min-width: 48em) {
   .navigation-nonmobile ul {
     width: 100%;
-    min-width: 675px;
     height: 70px;
     padding: 0px 15px; } }
 @media (min-width: 87.25em) {
@@ -228,38 +227,47 @@ header {
 .hero {
   padding: 10px 15px;
   position: static; }
+  @media (min-width: 34em) {
+    .hero {
+      margin-top: 30px;
+      padding: 25px 35px; } }
+  @media (min-width: 48em) {
+    .hero {
+      margin-top: 75px; } }
   @media (min-width: 62em) {
     .hero {
-      margin-top: 75px;
       padding: 25px; } }
 
 .hero h2 {
   font-size: 1.2rem; }
-  @media (min-width: 62rem) {
+  @media (min-width: 34rem) {
     .hero h2 {
       font-size: 2rem; } }
 
 .highlight {
   font-size: 1.5rem; }
-  @media (min-width: 62rem) {
+  @media (min-width: 34rem) {
     .highlight {
       font-size: 2.5rem; } }
 
 .blue-highlight {
   font-size: 1.8rem;
   color: #fb8819; }
-  @media (min-width: 62rem) {
+  @media (min-width: 34rem) {
     .blue-highlight {
       font-size: 2.8rem; } }
 
 .orange-highlight {
   font-size: 1.7rem;
   color: #30cbec; }
-  @media (min-width: 62rem) {
+  @media (min-width: 34rem) {
     .orange-highlight {
       font-size: 2.7rem; } }
 
-@media (min-width: 62em) {
+@media (min-width: 34em) {
+  .hero-bottom {
+    margin-top: 5%; } }
+@media (min-width: 48em) {
   .hero-bottom {
     position: absolute;
     bottom: 0;
@@ -272,13 +280,20 @@ div.quotes {
   width: 65%; }
   div.quotes p {
     font-size: 0.8rem; }
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     div.quotes {
       opacity: 0.85;
       width: 90%; }
       div.quotes p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem; } }
+  @media (min-width: 62em) {
+    div.quotes {
+      width: 95%; }
+      div.quotes p {
         font-size: 1.2rem;
-        padding-left: 25px; } }
+        padding-left: 25px;
+        margin-bottom: 1rem; } }
 
 .banner {
   position: relative;
@@ -647,7 +662,7 @@ footer {
   width: 50px;
   text-indent: -9999px;
   background: #fb8819 url("../images/search.png") center center no-repeat; }
-  @media (min-width: 34rem) {
+  @media (min-width: 48rem) {
     .search-button {
       top: 15%;
       right: 15px;
@@ -688,11 +703,17 @@ footer {
       min-width: 200px;
       margin-left: 10px; } }
 
-.scroll-button i {
-  padding: 0px 5px 0px 0px; }
-@media (min-width: 62em) {
-  .scroll-button {
-    margin-bottom: 10px; } }
+.scroll-button {
+  margin-top: 10%; }
+  .scroll-button i {
+    padding: 0px 5px 0px 0px; }
+  @media (min-width: 34em) {
+    .scroll-button {
+      margin-top: 15%; } }
+  @media (min-width: 48em) {
+    .scroll-button {
+      margin-bottom: 10px;
+      margin-top: 0; } }
 
 @media (min-width: 48em) {
   .feedback-button {
