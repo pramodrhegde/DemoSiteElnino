@@ -197,50 +197,66 @@ header{
 	font-size:1.2rem;
 }
 .navigation-nonmobile{
-
-	width:90%;
-	margin:0px auto;
-	background:$navigation-background;
-	height:100px;
-	position:relative;
-	@media (max-width:62em){
+	
+	@media (min-width:48em){
+		width:90%;
+		margin:0px auto;
+		background:$navigation-background;
 		height:70px;
+		position:relative;
+	}
+	@media (min-width:87.25em){
+		height:100px;
 	}
 }
 .navigation-nonmobile ul{
-	width:100%;
-	height:100px;
-	padding:0px 20px;
-	position:relative;
-	@media (max-width:62em){
+	
+	@media (min-width:48em){
+		width:100%;
+		min-width:675px;
 		height:70px;
 		padding:0px 15px;
 	}
+	@media (min-width:87.25em){
+		height:100px;
+		padding:0px 20px;
+	}
 }
 .navigation-nonmobile ul li{
-	display:inline-block;
-	height:100px;
-	@media (max-width:62em){
+	
+	@media (min-width:48em){
+		display:inline-block;
 		height:70px;
+	}
+	@media (min-width:87.25em){
+		height:100px;
 	}
 }
 .navigation-nonmobile ul li a{
-	color:$font-color-base;
-	font-size:1.6rem;
-	font-family:$league-spartan;
-	text-transform:uppercase;
-	display:inline-block;
-	padding:35px 20px 25px;
-	min-width:200px;;
-	text-align:center;
-
-	&:hover{
-		text-decoration:none;
-	}
-	@media (max-width:62em){
-		font-size:1.2rem;
-		padding:35px 20px 25px;
+	
+	@media (min-width:48em){
+		font-size:1em;
+		padding:25px 20px 20px;
 		min-width:100px;
+		color:$font-color-base;
+		font-family:$league-spartan;
+		text-transform:uppercase;
+		display:inline-block;
+		text-align:center;
+
+		&:hover{
+			text-decoration:none;
+		}
+	}
+	@media (min-width:62em){
+		font-size:1.2rem;
+		min-width:120px;
+		padding:25px 20px 16px;
+	}
+	@media (min-width:87.25em){
+		font-size:1.6rem;
+		padding:35px 20px 25px;
+		min-width:200px;;
 	}
 }
 .navigation-nonmobile ul li a.active{
@@ -723,8 +739,15 @@ footer{
 	width:50px;
 	text-indent:-9999px;
 	background:$orange-button-color url('../images/search.png') center center no-repeat;
+	
+	@media (min-width:34rem){
+		top:15%;
+		right:15px;
+		width:60px;
+		height:50px;
+	}
 
-	@media (min-width:48rem){
+	@media (min-width:87.5rem){
 		top:15%;
 		right:20px;
 		width:75px;
