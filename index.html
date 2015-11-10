@@ -152,35 +152,65 @@
 			<div class="clearfix">
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blue-section">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
-						<div class="video vid-euro-final-ger">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+						<div id="" class="video vid-euro-final-ger">
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-euro-final-ger.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
 						<div class="video vid-champians-league">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-champians-league.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
 						<div class="video vid-liverpool">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-liverpool.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 orange-section">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
 						<div class="video vid-euro-final-ita">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-euro-final-ita.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
 						<div class="video vid-real-copa">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-real-copa.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
 						<div class="video vid-europa-final">
-							<a href="#0"><i class="fa fa-play-circle-o fa-5x"></i></a>
+							<div class="media">
+								<video>
+									<source src="src/videos/vid-europa-final.mp4" type="video/mp4">
+								</video>
+							</div>
+							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
 					</div>
 				</div>
@@ -227,6 +257,11 @@
 			});
 			$('.navigation-mobile').on('click',function(){
 				$(this).hide();
+			});
+
+			$('a.video-play-button').on('click',function(){
+				$(this).hide();
+				$(this).siblings('.media').show().find('video')[0].play();
 			});
 		});
 	</script>

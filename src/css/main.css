@@ -484,6 +484,16 @@ div.cover-pic {
         margin-bottom: 45px;
         padding-top: 35px; } }
 
+div.media {
+  width: 100%;
+  height: 100%;
+  background: #323232;
+  display: none; }
+
+video {
+  max-width: 100%;
+  height: 100%; }
+
 .blue-section {
   background: #30cbec;
   border-bottom: 5px solid #fb8819;

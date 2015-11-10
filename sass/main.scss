@@ -576,7 +576,16 @@ div.cover-pic{
 		}
 	}
 }
-
+div.media{
+	width:100%;
+	height:100%;
+	background:$secondary-banner-color;
+	display:none;
+}
+video{
+	max-width:100%;
+	height:100%;
+}
 .blue-section{
 	background:$blue-button-color;
 	border-bottom:5px solid $orange-button-color;
