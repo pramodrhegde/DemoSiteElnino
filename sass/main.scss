@@ -24,12 +24,15 @@ $image-background:#111111;
 //mixins
 @mixin create-button($color,$background,$border-color){
 	color:$color;
-	background-color:$background;
+	background:$background;
 	border-color:$border-color;
 	font-family:$league_spartan;
 	text-transform:uppercase;
-	&:hover,&:focus,&:visited,&:active{
-		background-color:darken($background,5%);
+	&:hover{
+		background:darken($background,5%);
+		color:$color;
+	}
+	&:active,&:focus,&:visited{
 		color:$color;
 	}
 }
@@ -50,6 +53,11 @@ body{
 	font-weight:normal;
 	background-color:$background-color-base;
 	color:$font-color-base;
+}
+a{
+	&:hover,&:focus,&:visited,&:actvie{
+		text-decoration:none;
+	}
 }
 img{
 	max-width:100%;
@@ -242,9 +250,30 @@ header{
 		text-transform:uppercase;
 		display:inline-block;
 		text-align:center;
+		position:relative;
 
-		&:hover{
+		&:hover,&:focus,&:active,&:visited{
 			text-decoration:none;
+		}
+		&:after{
+			content:"";
+			position:absolute;
+			bottom:0;
+			left:0;
+			height:10px;
+			width:0%;
+			background:$blue-button-color;
+			transition:width 0.6s cubic-bezier(0.125, 0.75, 0.415, 1);
+		}
+		&:hover:after{
+			content:"";
+			position:absolute;
+			bottom:0;
+			left:0;
+			height:10px;
+			width:100%;
+			background:$blue-button-color;
+			transition:width 0.5s cubic-bezier(0.125, 0.75, 0.415, 1);
 		}
 	}
 	@media (min-width:62em){
@@ -670,10 +699,34 @@ footer{
 		padding:15px 5px 0px 0px;
 		border-bottom:5px solid $blue-button-color;
 		margin-bottom:10px;
+		position:relative;
+
+		&:hover,&:active,&:focus,&:visited{
+			text-decoration:none;
+		}
+
+		&:after{
+			content:"";
+			position:absolute;
+			left:0;
+			bottom:-5px;
+			height:5px;
+			background:$blue-button-color;
+			width:0%;
+			transition:all 0.6s cubic-bezier(0.125, 0.75, 0.415, 1);
+		}
+		&:hover:after{
+			content:"";
+			position:absolute;
+			left:0;
+			bottom:-5px;
+			height:5px;
+			background:$orange-button-color;
+			width:102%;
+			transition:width 0.6s cubic-bezier(0.125, 0.75, 0.415, 1);
+		}
 	}
-	&:hover{
-		text-decoration:none;
-	}
+
 }
 .footer-links{
 	text-align:center;
@@ -787,6 +840,7 @@ footer{
 .scroll-button,.story-button,.stats-button,.merchandise-button,.feedback-button{
 	min-width:150px;
 	padding-top:0.9375rem;
+	position:relative;
 
 	@media (min-width:62em){
 		padding-top:1.25rem;
@@ -795,6 +849,7 @@ footer{
 		margin-left:10px;
 	}
 }
+
 .scroll-button{
 	//background:$orange-button-color url('../images/scroll.png') 5px center no-repeat;
 	//padding-left:30px;
@@ -827,7 +882,7 @@ footer{
 	position:absolute;
 	left:20px;
 	@media (min-width:62em){
-		left:40px;
+		left:30px;
 	}
 }
 .stats-button{
