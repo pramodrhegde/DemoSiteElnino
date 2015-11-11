@@ -157,6 +157,14 @@
 								<video>
 									<source src="src/videos/vid-euro-final-ger.mp4" type="video/mp4">
 								</video>
+								<div class="video-controls">
+									<a href="#0">Play</a>
+									<a href="#0">Mute</a>
+									<a href="#0">Volume+</a>
+									<a href="#0">Volume-</a>
+									<div class="bufferbar"></div>
+									<div class="progresbar"></div>
+								</div>
 							</div>
 							<a href="#0" class="video-play-button"><i class="fa fa-play-circle-o fa-5x"></i></a>
 						</div>
@@ -250,20 +258,6 @@
 	<script src="src/js/jquery.min.js"></script>
 	<script src="src/js/bootstrap.js"></script>
 	<!-- endbower -->
-	<script>
-		$(document).ready(function(){
-			$('.menu-button').on('click',function(){
-				$('.navigation-mobile').show();
-			});
-			$('.navigation-mobile').on('click',function(){
-				$(this).hide();
-			});
-
-			$('a.video-play-button').on('click',function(){
-				$(this).hide();
-				$(this).siblings('.media').show().find('video')[0].play();
-			});
-		});
-	</script>
+	<script src="src/js/main.js"></script>
 </body>
 </html>
