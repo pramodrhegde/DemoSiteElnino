@@ -518,18 +518,21 @@ div.video-controls {
 div.progresbar, div.bufferbar {
   position: absolute;
   top: -5px;
-  left: 1px;
+  left: 0px;
   right: 1px;
   height: 5px;
   opacity: 1; }
 
-div.progresbar {
+.blue-section div.progresbar, .orange-section div.bufferbar {
   background: #fb8819;
+  width: 0%; }
+
+.blue-section div.bufferbar, .orange-section div.progresbar {
+  background: #30cbec;
   width: 50%; }
 
 div.bufferbar {
-  background: #30cbec;
-  width: 75%; }
+  opacity: 0.9; }
 
 .blue-section {
   background: #30cbec;
