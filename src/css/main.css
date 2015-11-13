@@ -261,32 +261,65 @@ header {
   @media (min-width: 62em) {
     .hero {
       padding: 25px; } }
+  @media (max-height: 450px) {
+    .hero {
+      width: 70%;
+      float: right;
+      margin-top: 0px;
+      padding: 10px 5px 5px 100px; } }
+  @media (max-height: 350px) {
+    .hero {
+      padding: 0px 5px 5px 80px; } }
 
 .hero h2 {
   font-size: 1.2rem; }
   @media (min-width: 34rem) {
     .hero h2 {
       font-size: 2rem; } }
+  @media (max-height: 450px) {
+    .hero h2 {
+      font-size: 1rem; } }
+  @media (max-height: 350px) {
+    .hero h2 {
+      font-size: 0.9rem; } }
 
 .highlight {
   font-size: 1.5rem; }
   @media (min-width: 34rem) {
     .highlight {
       font-size: 2.5rem; } }
+  @media (max-height: 450px) {
+    .highlight {
+      font-size: 1.3rem; } }
+  @media (max-height: 350px) {
+    .highlight {
+      font-size: 1.1rem; } }
 
-.blue-highlight {
+.orange-highlight {
   font-size: 1.8rem;
   color: #fb8819; }
   @media (min-width: 34rem) {
-    .blue-highlight {
+    .orange-highlight {
       font-size: 2.8rem; } }
+  @media (max-height: 450px) {
+    .orange-highlight {
+      font-size: 1.7rem; } }
+  @media (max-height: 350px) {
+    .orange-highlight {
+      font-size: 1.5rem; } }
 
-.orange-highlight {
+.blue-highlight {
   font-size: 1.7rem;
   color: #30cbec; }
   @media (min-width: 34rem) {
-    .orange-highlight {
+    .blue-highlight {
       font-size: 2.7rem; } }
+  @media (max-height: 450px) {
+    .blue-highlight {
+      font-size: 1.5rem; } }
+  @media (max-height: 350px) {
+    .blue-highlight {
+      font-size: 1.3rem; } }
 
 @media (min-width: 34em) {
   .hero-bottom {
@@ -294,11 +327,15 @@ header {
 @media (min-width: 48em) {
   .hero-bottom {
     position: absolute;
-    bottom: 0;
-    padding: 10px 15px 15px 10%; }
+    bottom: 7%;
+    right: 0;
+    padding: 10px 15px 15px 10px; }
     .hero-bottom .quotes:nth-child(2) > p {
       text-align: right;
       padding-right: 25px; } }
+@media (max-height: 450px) {
+  .hero-bottom {
+    display: none; } }
 
 div.quotes {
   width: 65%; }
@@ -808,8 +845,12 @@ footer {
       margin-top: 15%; } }
   @media (min-width: 48em) {
     .scroll-button {
-      margin-bottom: 10px;
-      margin-top: 0; } }
+      position: absolute;
+      bottom: 3%; } }
+  @media (max-height: 450px) {
+    .scroll-button {
+      position: absolute;
+      bottom: 5%; } }
 
 @media (min-width: 48em) {
   .feedback-button {

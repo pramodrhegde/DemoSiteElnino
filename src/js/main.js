@@ -17,17 +17,22 @@ $(document).ready(function(){
 		var $this = $(this);
 		$this.hide();
 		var video_object = $this.siblings('.media').show().find('video').get(0);
-		
-		$(video_object).on('loadedmetadata',function(){
-			alert('loaded');
+		video_object.play();
+		videosPlaying.push(video_object);
+
+		if(!canCheckBuffer){
+			setTimeout(buffer_status,500);
+			canCheckBuffer = true;
+		}
+		/*$(video_object).on('loadeddata',function(){
 			videosPlaying.push(video_object);
-			//video_object.play();
+			video_object.play();
 			if(!canCheckBuffer){
 				setTimeout(buffer_status,500);
 				canCheckBuffer = true;
 			}
-		}).
-		on('timeupdate',function(){
+		}).*/
+		$(video_object).on('timeupdate',function(){
 			var currentPos = video_object.currentTime;
 			var maxDuration = video_object.duration;
 			var percentage_width = 100 * (currentPos/maxDuration);
@@ -107,7 +112,7 @@ function buffer_status(){
 	for(var i = 0 ;i<videosPlaying.length;i++){
 		currentPlaying=videosPlaying[i];
 		var maxDuration = currentPlaying.duration;
-		var bufferedData = currentPlaying.buffered.end(0);
+		var bufferedData =(currentPlaying.buffered && currentPlaying.buffered.length) ? currentPlaying.buffered.end(0) : 0 ;
 		var percentageBuffer = 100*(bufferedData/maxDuration);
 
 		$(currentPlaying).parent('.media').find('.bufferbar').css({'width':percentageBuffer+'%'});

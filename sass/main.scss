@@ -315,12 +315,32 @@ header{
 	@media (min-width:62em){
 		padding:25px;
 	}
+
+	//media query for height
+	@media (max-height:450px){
+		width:70%;
+		float:right;
+		margin-top:0px;
+		padding:10px 5px 5px 100px;
+	}
+	@media (max-height:350px){
+		padding:0px 5px 5px 80px;
+	}
+	
 }
 .hero h2{
 	font-size:1.2rem;
 	
 	@media (min-width:34rem){
 		font-size:2rem;
+	}
+
+	//media query for height
+	@media (max-height:450px){
+		font-size:1rem;
+	}
+	@media (max-height:350px){
+		font-size:0.9rem;
 	}
 }
 
@@ -330,21 +350,48 @@ header{
 	@media (min-width:34rem){
 		font-size:2.5rem;
 	}
+
+	//media query for height
+	@media (max-height:450px){
+		font-size:1.3rem;
+	}
+
+	@media (max-height:350px){
+		font-size:1.1rem;
+	}
 }
-.blue-highlight{
+.orange-highlight{
 	font-size:1.8rem;
 	color:$orange-button-color;
 
 	@media (min-width:34rem){
 		font-size:2.8rem;
 	}
+
+	//media query for height
+	@media (max-height:450px){
+		font-size:1.7rem;
+	}
+
+	@media (max-height:350px){
+		font-size:1.5rem;
+	}
 }
-.orange-highlight{
+.blue-highlight{
 	font-size:1.7rem;
 	color:$blue-button-color;
 	
 	@media (min-width:34rem){
 		font-size:2.7rem;
+	}
+
+	//media query for height
+	@media (max-height:450px){
+		font-size:1.5rem;
+	}
+
+	@media (max-height:350px){
+		font-size:1.3rem;
 	}
 }
 .hero-bottom{
@@ -353,13 +400,19 @@ header{
 	}
 	@media (min-width:48em){
 		position:absolute;
-		bottom:0;
-		padding:10px 15px 15px 10%;
+		bottom:7%;
+		right:0;
+		padding:10px 15px 15px 10px;
 
 		.quotes:nth-child(2) > p{
 			text-align:right;
 			padding-right:25px;
 		}
+	}
+
+	//media query for height
+	@media (max-height:450px){
+		display:none;
 	}
 }
 div.quotes{
@@ -910,8 +963,14 @@ footer{
 		margin-top:15%;
 	}
 	@media (min-width:48em){
-		margin-bottom:10px;
-		margin-top:0;
+		position:absolute;
+		bottom:3%;
+	}
+	
+	//media query for height
+	@media (max-height:450px){
+		position:absolute;
+		bottom:5%;
 	}
 	
 }
