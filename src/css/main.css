@@ -529,7 +529,7 @@ div.progresbar, div.bufferbar {
 
 .blue-section div.bufferbar, .orange-section div.progresbar {
   background: #30cbec;
-  width: 50%; }
+  width: 0%; }
 
 div.bufferbar {
   opacity: 0.9; }

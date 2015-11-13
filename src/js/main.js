@@ -8,23 +8,34 @@ $(document).ready(function(){
 	});
 
 	//Video player functionality
+	canCheckBuffer = false;
+	videosPlaying = [];
+	//var bufferCheckInterval;
 
 	//Play video on click of play button
 	$('a.video-play-button').on('click',function(){
 		var $this = $(this);
 		$this.hide();
 		var video_object = $this.siblings('.media').show().find('video').get(0);
-		video_object.play();
-
-		$(video_object).on('timeupdate',function(){
+		
+		$(video_object).on('loadedmetadata',function(){
+			alert('loaded');
+			videosPlaying.push(video_object);
+			//video_object.play();
+			if(!canCheckBuffer){
+				setTimeout(buffer_status,500);
+				canCheckBuffer = true;
+			}
+		}).
+		on('timeupdate',function(){
 			var currentPos = video_object.currentTime;
 			var maxDuration = video_object.duration;
 			var percentage_width = 100 * (currentPos/maxDuration);
 			$this.siblings('.media').find('div.progresbar').css({'width':percentage_width+'%'});
-		}).on('ended',function(){
+		})
+		.on('ended',function(){
 			$this.siblings('.media').find('.play-button').text('Replay');
 		});
-		setInterval(buffer_status,500);
 		return false;
 	});
 
@@ -93,4 +104,20 @@ function reset_player(video){
 }
 
 function buffer_status(){
+	for(var i = 0 ;i<videosPlaying.length;i++){
+		currentPlaying=videosPlaying[i];
+		var maxDuration = currentPlaying.duration;
+		var bufferedData = currentPlaying.buffered.end(0);
+		var percentageBuffer = 100*(bufferedData/maxDuration);
+
+		$(currentPlaying).parent('.media').find('.bufferbar').css({'width':percentageBuffer+'%'});
+		if(maxDuration == bufferedData){
+			alert('buffer-colpete');
+			videosPlaying.splice(i,1);
+		}
+	}
+	if(videosPlaying.length !== 0){
+		setTimeout(buffer_status,500);
+		canCheckBuffer = false;
+	}
 }
