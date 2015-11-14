@@ -7,6 +7,10 @@ $(document).ready(function(){
 		$(this).hide();
 	});
 
+	//Scroll Functionality
+	$('.scroll-button').on('click',function(){
+		$('html,body').animate({scrollTop:$('.banner').height()},500,"swing");
+	});
 	//Video player functionality
 	canCheckBuffer = false;
 	videosPlaying = [];
