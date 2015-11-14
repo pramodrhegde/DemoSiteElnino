@@ -317,8 +317,11 @@ header{
 	}
 
 	//media query for height
-	@media (max-height:450px){
+	@media (min-width:34rem) and (max-height:900px){
 		width:70%;
+		margin-top:45px;
+	}
+	@media (max-height:450px){
 		float:right;
 		margin-top:0px;
 		padding:10px 5px 5px 100px;
@@ -326,9 +329,9 @@ header{
 	@media (max-height:350px){
 		padding:0px 5px 5px 80px;
 	}
-	
 }
 .hero h2{
+
 	font-size:1.2rem;
 	
 	@media (min-width:34rem){
@@ -336,6 +339,9 @@ header{
 	}
 
 	//media query for height
+	@media (min-width:34rem) and (max-height:900px){
+		font-size:2rem;
+	}
 	@media (max-height:450px){
 		font-size:1rem;
 	}
@@ -352,6 +358,9 @@ header{
 	}
 
 	//media query for height
+	@media (min-width:34rem) and (max-height:900px){
+		font-size:2.5rem;
+	}
 	@media (max-height:450px){
 		font-size:1.3rem;
 	}
@@ -369,6 +378,9 @@ header{
 	}
 
 	//media query for height
+	@media (min-width:34rem) and (max-height:900px){
+		font-size:2.9rem;
+	}
 	@media (max-height:450px){
 		font-size:1.7rem;
 	}
@@ -386,6 +398,9 @@ header{
 	}
 
 	//media query for height
+	@media (min-width:34rem) and (max-height:900px){
+		font-size:2.7rem;
+	}
 	@media (max-height:450px){
 		font-size:1.5rem;
 	}
@@ -411,6 +426,14 @@ header{
 	}
 
 	//media query for height
+	@media (max-height:900px){
+		bottom:5%;
+		padding-top:0px;
+	}
+	@media (max-height:775px){
+		bottom:4%;
+		right:auto;
+	}
 	@media (max-height:450px){
 		display:none;
 	}
@@ -435,6 +458,14 @@ div.quotes{
 			padding-left:25px;
 			margin-bottom:1rem;
 		}
+	}
+
+	//media query for height
+	@media (max-height:900px){
+		width:90%;
+	}
+	@media (max-height:775px){
+		width:95%;
 	}
 }
 
