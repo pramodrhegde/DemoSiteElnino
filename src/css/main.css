@@ -264,7 +264,7 @@ header {
   @media (min-width: 34rem) and (max-height: 900px) {
     .hero {
       width: 70%;
-      margin-top: 45px; } }
+      margin-top: 25px; } }
   @media (max-height: 450px) {
     .hero {
       float: right;
@@ -281,7 +281,7 @@ header {
       font-size: 2rem; } }
   @media (min-width: 34rem) and (max-height: 900px) {
     .hero h2 {
-      font-size: 2rem; } }
+      font-size: 2.5rem; } }
   @media (max-height: 450px) {
     .hero h2 {
       font-size: 1rem; } }
@@ -293,7 +293,7 @@ header {
   font-size: 1.5rem; }
   @media (min-width: 34rem) {
     .highlight {
-      font-size: 2.5rem; } }
+      font-size: 2.8rem; } }
   @media (min-width: 34rem) and (max-height: 900px) {
     .highlight {
       font-size: 2.5rem; } }
@@ -309,7 +309,7 @@ header {
   color: #fb8819; }
   @media (min-width: 34rem) {
     .orange-highlight {
-      font-size: 2.8rem; } }
+      font-size: 3.3rem; } }
   @media (min-width: 34rem) and (max-height: 900px) {
     .orange-highlight {
       font-size: 2.9rem; } }
@@ -325,7 +325,7 @@ header {
   color: #30cbec; }
   @media (min-width: 34rem) {
     .blue-highlight {
-      font-size: 2.7rem; } }
+      font-size: 3rem; } }
   @media (min-width: 34rem) and (max-height: 900px) {
     .blue-highlight {
       font-size: 2.7rem; } }
@@ -356,7 +356,7 @@ header {
   .hero-bottom {
     bottom: 4%;
     right: auto; } }
-@media (max-height: 450px) {
+@media (max-height: 600px) {
   .hero-bottom {
     display: none; } }
 
