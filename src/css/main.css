@@ -265,10 +265,12 @@ header {
     .hero {
       width: 70%;
       margin-top: 25px; } }
+  @media (max-height: 700px) {
+    .hero {
+      margin-top: 0px; } }
   @media (max-height: 450px) {
     .hero {
       float: right;
-      margin-top: 0px;
       padding: 10px 5px 5px 100px; } }
   @media (max-height: 350px) {
     .hero {
