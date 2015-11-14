@@ -584,6 +584,38 @@ div.video-controls {
     opacity: 0.8;
     background: #323232;
     z-index: -1; }
+  div.video-controls .video-controls-left a, div.video-controls .video-controls-right a {
+    width: 50px;
+    height: 38px;
+    display: inline-block;
+    margin: 1px 0px 1px 1px;
+    font-size: 1.5rem;
+    padding: 2px 10px 5px;
+    text-align: center; }
+    div.video-controls .video-controls-left a:hover, div.video-controls .video-controls-right a:hover {
+      text-decoration: none; }
+    div.video-controls .video-controls-left a:focus, div.video-controls .video-controls-left a:active, div.video-controls .video-controls-left a:visited, div.video-controls .video-controls-right a:focus, div.video-controls .video-controls-right a:active, div.video-controls .video-controls-right a:visited {
+      text-decoration: none; }
+    div.video-controls .video-controls-left a:first-child, div.video-controls .video-controls-right a:first-child {
+      margin-right: 1px; }
+  div.video-controls .video-controls-left {
+    width: 40%;
+    height: 40px;
+    text-align: left; }
+    div.video-controls .video-controls-left a {
+      float: left; }
+  div.video-controls .video-controls-right {
+    width: 60%;
+    text-align: right;
+    height: 40px; }
+    div.video-controls .video-controls-right a {
+      float: right; }
+
+.blue-section .video-controls-left a, .blue-section .video-controls-right a {
+  background: #fb8819; }
+
+.orange-section .video-controls-left a, .orange-section .video-controls-right a {
+  background: #30cbec; }
 
 div.progresbar, div.bufferbar {
   position: absolute;
