@@ -380,10 +380,12 @@ div.quotes {
         margin-bottom: 1rem; } }
   @media (max-height: 900px) {
     div.quotes {
-      width: 90%; } }
+      width: 90%;
+      font-size: 1rem; } }
   @media (max-height: 775px) {
     div.quotes {
-      width: 95%; } }
+      width: 95%;
+      font-size: 0.9rem; } }
 
 .banner {
   position: relative;

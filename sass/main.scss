@@ -463,9 +463,11 @@ div.quotes{
 	//media query for height
 	@media (max-height:900px){
 		width:90%;
+		font-size:1rem;
 	}
 	@media (max-height:775px){
 		width:95%;
+		font-size:0.9rem;
 	}
 }
 
