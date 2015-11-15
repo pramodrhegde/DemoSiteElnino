@@ -82,20 +82,6 @@ hr {
 .loader-overlay.ready {
   transform: translateY(-100%) translateZ(0); }
 
-.background-div-orange, .background-div-blue {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 50%; }
-
-.background-div-orange {
-  right: 0;
-  background: #fb8819; }
-
-.background-div-blue {
-  left: 0;
-  background: #30cbec; }
-
 .main {
   position: relative;
   float: none;
