@@ -64,9 +64,9 @@ hr {
   transform: translateY(0%) translateZ(0);
   transition: all 2s 1.5s cubic-bezier(0.125, 0.75, 0.415, 1); }
   .loader-overlay .loader {
-    width: 80%;
-    height: 30px;
-    margin: 65% auto 0;
+    width: 50%;
+    height: 70px;
+    margin: 25% auto 0;
     position: relative;
     background: #30cbec; }
     .loader-overlay .loader .progress {
@@ -78,11 +78,6 @@ hr {
       height: 100%;
       background: #fb8819;
       transition: all 0.4s cubic-bezier(0.125, 0.75, 0.415, 1); }
-    @media (min-width: 48em) {
-      .loader-overlay .loader {
-        width: 50%;
-        height: 70px;
-        margin: 22% auto 0; } }
 
 .loader-overlay.ready {
   transform: translateY(-100%) translateZ(0); }

@@ -14,15 +14,14 @@ var everythingLoaded = setInterval(function() {
 }, 10);
 
 function updatePageLoadProgress(percent){
-	if(percent == 9){
+	if(percent === 9){
 		$('.progress').css({'width':100+"%"}).parents().each(function(){
 			$(this).addClass('ready');
 		});
 	}else{
-		if(percent==95){
+		if(percent===95){
 			percentPageLoad = percent-5;
 		}else{
-
 			$('.progress').css({'width':percent+"%"});
 		}
 		
