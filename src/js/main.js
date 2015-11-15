@@ -9,7 +9,7 @@ var everythingLoaded = setInterval(function() {
     init(); // this is the function that gets called when everything is loaded
   }else{
   	percentPageLoad+=5;
-  	updatePageLoadProgress(5);
+  	updatePageLoadProgress(percentPageLoad);
   }
 }, 10);
 

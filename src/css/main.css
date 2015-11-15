@@ -66,7 +66,7 @@ hr {
   .loader-overlay .loader {
     width: 50%;
     height: 70px;
-    margin: 25% auto 0;
+    margin: 22% auto 0;
     position: relative;
     background: #30cbec; }
     .loader-overlay .loader .progress {
@@ -82,11 +82,26 @@ hr {
 .loader-overlay.ready {
   transform: translateY(-100%) translateZ(0); }
 
+.background-div-orange, .background-div-blue {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50%; }
+
+.background-div-orange {
+  right: 0;
+  background: #fb8819; }
+
+.background-div-blue {
+  left: 0;
+  background: #30cbec; }
+
 .main {
   position: relative;
   float: none;
   margin: 0px auto;
-  padding: 0px; }
+  padding: 0px;
+  z-index: 1; }
   @media (min-width: 34em) {
     .main {
       width: 90%; } }
