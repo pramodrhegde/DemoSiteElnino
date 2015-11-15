@@ -1,10 +1,11 @@
 $(document).ready(function(){
+	alert('loaded');
 	// Side bar hide funtionality
 	$('.menu-button').on('click',function(){
-		$('.navigation-mobile').show();
+		$('.navigation-mobile').addClass('visible');
 	});
 	$('.navigation-mobile').on('click',function(){
-		$(this).hide();
+		$(this).removeClass('visible');
 	});
 
 	//Scroll Functionality

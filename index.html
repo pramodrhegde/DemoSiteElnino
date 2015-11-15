@@ -12,7 +12,11 @@
 	<link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-	
+	<div class="loader-overlay">
+		<div class="loader"></div>
+	</div>
+	<div class="background-div-orange"></div>
+	<div class="background-div-blue"></div>
 	<div class="main col-xs-12 col-sm-12 col-md-12 col-lg-12" id="main">
 		<div class="banner util-height">
 			<header>
@@ -25,7 +29,7 @@
 						<a href="#0" class="btn orange-btn search-button">Search</a>
 					</div>
 
-					<nav class="navigation-mobile hidden">
+					<nav class="navigation-mobile">
 						<h1>Fernando Torres 9</h1>
 						<ul>
 							<li><a href="#">Home</a></li>
@@ -36,7 +40,7 @@
 						</ul>
 					</nav>
 
-					<div class="search-box">
+					<div class="search-box hidden">
 						<input type="text" placeholder="Search...">
 						<a href="#0" class="btn orange-btn cross-button">Close</a>
 					</div>
@@ -54,6 +58,9 @@
 							<li><a href="#">About</a></li>
 						</ul>
 						<a href="#0" class="btn orange-btn search-button">S</a>
+						<div class="search-box">
+							<input type="text" placeholder="Search...">
+						</div>
 					</nav>
 				</div>
 			</header>

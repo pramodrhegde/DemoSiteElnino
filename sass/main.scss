@@ -60,6 +60,9 @@ a{
 		color:$font-color-base;
 	}
 }
+input,textarea{
+	color:$font-color-dark !important;
+}
 img{
 	max-width:100%;
 }
@@ -84,6 +87,19 @@ hr{
 
 	@media (min-width:62em){
 		margin:0 10px;
+	}
+}
+.loader-overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:$background-color-base;
+	opacity:0.9;
+	z-index:1;
+	.loader{
+
 	}
 }
 .main{
@@ -145,6 +161,11 @@ header{
 	bottom:0;
 	z-index:3;
 	overflow:hidden;
+	transform:translateX(-100%) translateZ(0);
+	transition:all 0.4s cubic-bezier(0.125, 0.75, 0.415, 1);
+}
+.navigation-mobile.visible{
+	transform:translateX(0%) translateZ(0);
 }
 .navigation-mobile:after{
 	content:"";
@@ -206,16 +227,41 @@ header{
 	font-size:1.2rem;
 }
 .navigation-nonmobile{
-	
+
 	@media (min-width:48em){
 		width:90%;
 		margin:0px auto;
 		background:$navigation-background;
 		height:70px;
 		position:relative;
+		.search-box{
+			display:none;
+			position:absolute;
+			top:15%;
+			height:50px;
+			width:30%;
+			left:auto;
+			right:75px;
+			text-align:right;
+			input{
+				width:100%;
+			}
+		}
 	}
+	@media (max-width: 87.25em) and (min-width: 75em){
+		.search-box{
+			display:block;
+			width:20%;
+		}
+	}
+
 	@media (min-width:87.25em){
 		height:100px;
+		.search-box{
+			display:none;
+			height:70px;
+			right:95px;
+		}
 	}
 }
 .navigation-nonmobile ul{
@@ -984,6 +1030,9 @@ footer{
 	text-indent:-9999px;
 	background:$orange-button-color url('../images/search.png') center center no-repeat;
 	
+	&:hover{
+		background:darken($orange-button-color,5%) url('../images/search.png') center center no-repeat;;
+	}
 	@media (min-width:48rem){
 		top:15%;
 		right:15px;
@@ -992,7 +1041,6 @@ footer{
 	}
 
 	@media (min-width:87.5rem){
-		top:15%;
 		right:20px;
 		width:75px;
 		height:70px;
@@ -1006,6 +1054,9 @@ footer{
 	width:50px;
 	text-indent:-9999px;
 	background:$blue-button-color url('../images/menu.png') center center no-repeat;
+	&:hover{
+		background:darken($blue-button-color,5%) url('../images/menu.png') center center no-repeat;
+	}
 }
 .cross-button{
 	position:absolute;

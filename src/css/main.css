@@ -26,6 +26,9 @@ a {
   a:hover, a:focus, a:visited, a:active {
     color: #f6f6f6; }
 
+input, textarea {
+  color: #252525 !important; }
+
 img {
   max-width: 100%; }
 
@@ -49,6 +52,16 @@ hr {
   @media (min-width: 62em) {
     hr {
       margin: 0 10px; } }
+
+.loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #404040;
+  opacity: 0.9;
+  z-index: 1; }
 
 .main {
   position: relative;
@@ -102,7 +115,12 @@ header {
   right: 0;
   bottom: 0;
   z-index: 3;
-  overflow: hidden; }
+  overflow: hidden;
+  transform: translateX(-100%) translateZ(0);
+  transition: all 0.4s cubic-bezier(0.125, 0.75, 0.415, 1); }
+
+.navigation-mobile.visible {
+  transform: translateX(0%) translateZ(0); }
 
 .navigation-mobile:after {
   content: "";
@@ -169,10 +187,29 @@ header {
     margin: 0px auto;
     background: #263134;
     height: 70px;
-    position: relative; } }
+    position: relative; }
+    .navigation-nonmobile .search-box {
+      display: none;
+      position: absolute;
+      top: 15%;
+      height: 50px;
+      width: 30%;
+      left: auto;
+      right: 75px;
+      text-align: right; }
+      .navigation-nonmobile .search-box input {
+        width: 100%; } }
+@media (max-width: 87.25em) and (min-width: 75em) {
+  .navigation-nonmobile .search-box {
+    display: block;
+    width: 20%; } }
 @media (min-width: 87.25em) {
   .navigation-nonmobile {
-    height: 100px; } }
+    height: 100px; }
+    .navigation-nonmobile .search-box {
+      display: none;
+      height: 70px;
+      right: 95px; } }
 
 @media (min-width: 48em) {
   .navigation-nonmobile ul {
@@ -859,6 +896,8 @@ footer {
   width: 50px;
   text-indent: -9999px;
   background: #fb8819 url("../images/search.png") center center no-repeat; }
+  .search-button:hover {
+    background: #f67b04 url("../images/search.png") center center no-repeat; }
   @media (min-width: 48rem) {
     .search-button {
       top: 15%;
@@ -867,7 +906,6 @@ footer {
       height: 50px; } }
   @media (min-width: 87.5rem) {
     .search-button {
-      top: 15%;
       right: 20px;
       width: 75px;
       height: 70px; } }
@@ -880,6 +918,8 @@ footer {
   width: 50px;
   text-indent: -9999px;
   background: #30cbec url("../images/menu.png") center center no-repeat; }
+  .menu-button:hover {
+    background: #19c5ea url("../images/menu.png") center center no-repeat; }
 
 .cross-button {
   position: absolute;
