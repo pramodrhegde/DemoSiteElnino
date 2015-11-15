@@ -90,18 +90,38 @@ hr{
 	}
 }
 .loader-overlay{
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
 	background:$background-color-base;
-	opacity:0.9;
 	z-index:1;
-	.loader{
+	transform:translateY(0%)translateZ(0);
+	transition:all 2s 1.5s cubic-bezier(0.125, 0.75, 0.415, 1);
 
+	.loader{
+		width:50%;
+		height:70px;
+		margin:22% auto;
+		position:relative;
+		background:$blue-button-color;
+		.progress{
+			content:'';
+			position:absolute;
+			top:0;
+			left:0;
+			width:0%;
+			height:100%;
+			background:$orange-button-color;
+			transition:all 0.4s cubic-bezier(0.125, 0.75, 0.415, 1);
+		}
 	}
 }
+.loader-overlay.ready{
+	transform:translateY(-100%)translateZ(0);
+}
+
 .main{
 	position:relative;
 	float:none;

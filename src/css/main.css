@@ -54,14 +54,33 @@ hr {
       margin: 0 10px; } }
 
 .loader-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #404040;
-  opacity: 0.9;
-  z-index: 1; }
+  z-index: 1;
+  transform: translateY(0%) translateZ(0);
+  transition: all 2s 1.5s cubic-bezier(0.125, 0.75, 0.415, 1); }
+  .loader-overlay .loader {
+    width: 50%;
+    height: 70px;
+    margin: 22% auto;
+    position: relative;
+    background: #30cbec; }
+    .loader-overlay .loader .progress {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: #fb8819;
+      transition: all 0.4s cubic-bezier(0.125, 0.75, 0.415, 1); }
+
+.loader-overlay.ready {
+  transform: translateY(-100%) translateZ(0); }
 
 .main {
   position: relative;

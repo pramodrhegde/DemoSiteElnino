@@ -1,5 +1,36 @@
-$(document).ready(function(){
-	alert('loaded');
+/*$(document).ready(function(){
+
+});*/
+var percentPageLoad = 0;
+var everythingLoaded = setInterval(function() {
+  if (/loaded|complete/.test(document.readyState)) {
+    clearInterval(everythingLoaded);
+    updatePageLoadProgress(9);
+    init(); // this is the function that gets called when everything is loaded
+  }else{
+  	percentPageLoad+=5;
+  	updatePageLoadProgress(5);
+  }
+}, 10);
+
+function updatePageLoadProgress(percent){
+	if(percent == 9){
+		$('.progress').css({'width':100+"%"}).parents().each(function(){
+			$(this).addClass('ready');
+		});
+	}else{
+		if(percent==95){
+			percentPageLoad = percent-5;
+		}else{
+
+			$('.progress').css({'width':percent+"%"});
+		}
+		
+	}
+}
+
+function init(){
+	//alert('loaded');
 	// Side bar hide funtionality
 	$('.menu-button').on('click',function(){
 		$('.navigation-mobile').addClass('visible');
@@ -79,7 +110,8 @@ $(document).ready(function(){
 			$this.parent().find('.volume-up-button').css({'opacity':opacity});
 		}
 	});
-});
+}
+
 
 function play_pasue(video,button){
 	if(video.paused){
