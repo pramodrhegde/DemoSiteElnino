@@ -38,6 +38,15 @@ function init(){
 		$(this).removeClass('visible');
 	});
 
+	//Search-Button Mobile
+	$('.navbar-mobile .search-button').on('click',function(){
+		$('.search-box').slideToggle(200);
+	});
+	//Search-Button NonMobile
+	$('.navigation-nonmobile .search-button').on('click',function(){
+		$('.search-box').fadeToggle(200);
+	});
+
 	//Scroll Functionality
 	$('.scroll-button').on('click',function(){
 		$('html,body').animate({scrollTop:$('.banner').height()},500,"swing");
